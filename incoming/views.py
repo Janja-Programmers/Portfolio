@@ -11,7 +11,7 @@ def services(request):
     return render(request, 'service.html')
 
 def projects(request):
-    return render(request, 'projects.html')
+    return render(request, 'project.html')
 
 def blog(request):
     return render(request, 'blog.html')
