@@ -16,5 +16,14 @@ def projects(request):
 def blog(request):
     return render(request, 'blog.html')
 
+def team(request):
+    return render(request, 'team.html')
+
+def testimonial(request):
+    return render(request, 'testimonial.html')
+
 def contact(request):
     return render(request, 'contact.html')
+
+def blankpage(request):
+    return render(request, '404.html')
