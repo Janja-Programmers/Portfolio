@@ -323,7 +323,9 @@
 
 
 /*** Services Start ***/
-
+p {
+    font-size: 19px;
+}
 .services .services-item {
     box-shadow: 0 0 60px rgba(0, 0, 0, .2);
     width: 100%;
