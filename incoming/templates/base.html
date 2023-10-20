@@ -70,14 +70,13 @@
                         <div class="navbar-nav ms-auto mx-xl-auto p-0">
                             <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
                             <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                            <a href="{% url 'services' %}" class="nav-item nav-link">Services</a>
+                            <a href="#services" class="nav-item nav-link">Services</a>
                             <a href="{% url 'projects' %}" class="nav-item nav-link">Projects</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded">
                                     <a href="{% url 'blog' %}" class="dropdown-item">Our Blog</a>
                                     <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
-                                    <a href="{% url 'testimonial' %}" class="dropdown-item">Testimonial</a>
                                     <a href="{% url 'blankpage' %}" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
@@ -129,7 +128,7 @@
                     <div class="mt-4 d-flex flex-column short-link">
                         <a href="{% url 'about' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
                         <a href="{% url 'contact' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
-                        <a href="{% url 'services' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                        <a href="#services" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                         <a href="{% url 'projects' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
                         <a href="{% url 'blog' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
                     </div>
