@@ -9,5 +9,5 @@ urlpatterns = [
     path('team/', team, name="team"),
     path('contact', contact, name="contact"),
     path('blankpage/', blankpage, name="blankpage"),
-    
+    path('send_email/', send_email_view, name='send_email'),
 ]
