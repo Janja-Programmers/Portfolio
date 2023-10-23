@@ -13,9 +13,6 @@ def about(request):
 def projects(request):
     return render(request, 'project.html')
 
-def blog(request):
-    return render(request, 'blog.html')
-
 def team(request):
     return render(request, 'team.html')
 
