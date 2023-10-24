@@ -13,6 +13,9 @@ def about(request):
 def projects(request):
     return render(request, 'project.html')
 
+def services(request):
+    return render(request, 'services.html')
+
 def team(request):
     return render(request, 'team.html')
 
