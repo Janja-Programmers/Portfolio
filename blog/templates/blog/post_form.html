@@ -1,6 +1,5 @@
-{% extends "blog/base.html" %}
-{% load bootstrap5 %}
-{% block content %}
+{% extends "base.html" %}
+{% block incomingcontent %}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -20,4 +19,4 @@
             </div>
         </form>
     </div>
-{% endblock content %}
+{% endblock incomingcontent %}
