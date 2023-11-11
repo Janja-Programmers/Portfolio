@@ -30,6 +30,9 @@
 
          <!-- Favicon -->
         <link rel="icon" href="{% static 'img/logo.ico' %}" type="image/x-icon">
+
+        <!-- Google verification -->
+        <meta name="google-site-verification" content="BkaAClfMxLbft0buc12WMxxVYhEeRgnbUwufgEdK_Qo" />
     </head>
 
     <body>
@@ -78,9 +81,8 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded">
-                                    <a href="{% url 'blog' %}" class="dropdown-item">Our Blog</a>
+                                    <a href="{% url 'blankpage' %}" class="dropdown-item">Our Blog</a>
                                     <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
-                                    <a href="{% url 'blankpage' %}" class="dropdown-item">404 Page</a>
                                 </div>
                             </div>
                             <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
@@ -133,7 +135,7 @@
                         <a href="{% url 'contact' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
                         <a href="#services" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                         <a href="{% url 'projects' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
-                        <a href="{% url 'blog' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+                        <a href="{% url 'blankpage' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -163,7 +165,7 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    <span class="text-light">Designed By<a href="https://htmlcodex.com" class="text-secondary">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a></span>
+                    <span class="text-light">Courtesy of<a href="https://janjaprogrammers.com" class="text-secondary"> Janja Programmers</a> </span>
                 </div>
             </div>
         </div>
