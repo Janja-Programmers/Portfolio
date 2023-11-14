@@ -268,11 +268,11 @@
 
 @media (max-width: 992px) {
     .carousel-item {
-        min-height: 500px;
+        height: 55vh;
     }
     
     .carousel-item img {
-        min-height: 500px;
+        height: 60vh;
         object-fit: cover;
     }
 
@@ -287,11 +287,11 @@
 
 @media (max-width: 768px) {
     .carousel-item {
-        min-height: 400px;
+        height: 65vh;
     }
     
     .carousel-item img {
-        min-height: 400px;
+        height: 70vh;
         object-fit: cover;
     }
 
@@ -301,6 +301,25 @@
 
     .carousel-item p {
         font-size: 14px !important;
+    }
+}
+
+@media (max-width: 460px) {
+    .carousel-item {
+        height: 35vh;
+    }
+    
+    .carousel-item img {
+        height: 40vh;
+        object-fit: cover;
+    }
+
+    .carousel-item h1 {
+        font-size: 20px !important;
+    }
+
+    .carousel-item p {
+        font-size: 10px !important;
     }
 }
 
