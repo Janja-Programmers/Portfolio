@@ -673,6 +673,14 @@ p {
     z-index: -1;
 }
 
+.contact-detail a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
 .contact-map {
     background: #26d48c;
 }
