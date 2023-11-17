@@ -28,26 +28,28 @@ def blankpage(request):
 
 def send_email_view(request):
     if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
+        name = request.POST.get('your_name')
+        email = request.POST.get('your_email')
         subject = request.POST.get('subject')
-        message = request.POST.get('message')
+        visitor_message = request.POST.get('message')
+
+        # Customize the message content
+        your_custom_message = f"Name: {name}\nSubject: {subject}\nFrom: {email}\nVisitor Message:\n{visitor_message}"
 
         try:
-            email_sending_successful= send_mail(
-            name,
-            subject,
-            message,
-            email,
-            ['janjaprogrammers@gmail.com'],
-            fail_silently=False,
-        )
+            email_sending_successful = send_mail(
+                f"Feedback Form: {subject}",
+                your_custom_message,
+                'no-reply@yourdomain.com',
+                ['janjaprogrammers@gmail.com'],
+                fail_silently=False,
+            )
         except Exception as e:
             email_sending_successful = False
 
             if email_sending_successful:
                 return HttpResponseRedirect(reverse('contact'))
             else:
-                return HttpResponseRedirect(reverse('blankpage'))
+                raise ConnectionRefusedError(e)
+    
     return render(request, 'contact.html')
-
