@@ -19,6 +19,9 @@ def services(request):
 def team(request):
     return render(request, 'team.html')
 
+def blog(request):
+    return render(request, 'blog.html')
+
 def contact(request):
     return render(request, 'contact.html')
 
