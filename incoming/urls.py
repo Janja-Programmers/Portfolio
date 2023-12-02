@@ -12,4 +12,5 @@ urlpatterns = [
     path('contact', contact, name="contact"),
     path('blankpage/', blankpage, name="blankpage"),
     path('send_email/', send_email_view, name='send_email'),
+    path('enroll/', enroll, name='enroll')
 ]

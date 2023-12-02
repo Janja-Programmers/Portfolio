@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block incomingcontent %}
+
+        <!-- About image -->
+        <div class="position-relative">
+            <div style="width: 100%; height: 50vh; background-color: rgba(7, 7, 103, 0.418);">
+                <img style="width:100%; height:100%; object-fit: cover;" src="{% static 'img/learn.jpg' %}" alt="About us">
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle text-overlay">
+                <h1 class="text-secondary display-1 mb-4 animated fadeInRight">Enroll</h1>
+            </div>
+        </div>                     
+        <!-- Image End -->
+
+            <!-- Map and Form -->
+            <div class="row g-3 g-md-5">
+                <!-- Map -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                     <div class="p-3 p-md-5 rounded contact-form">
+                        <form method="post" action="{% url 'send_email' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name" name="your_name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email" name="your_email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Subject" name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Hello janjaprogrammers...." required
+                                    name="message"></textarea>
+                            </div>
+                            <div class="text-start">
+                                <button class="btn bg-primary text-white py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="p-3 p-md-5 rounded contact-form">
+                        <form method="post" action="{% url 'send_email' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name" name="your_name">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email" name="your_email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control border-0 py-3" placeholder="Subject" name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Hello janjaprogrammers...." required
+                                    name="message"></textarea>
+                            </div>
+                            <div class="text-start">
+                                <button class="btn bg-primary text-white py-3 px-5" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+{% endblock incomingcontent %}

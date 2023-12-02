@@ -56,3 +56,7 @@ def send_email_view(request):
                 raise ConnectionRefusedError(e)
     
     return render(request, 'contact.html')
+
+def enroll(request):
+    return render(request, 'enroll.html')
+
