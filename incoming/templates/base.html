@@ -33,6 +33,8 @@
 
         <!-- Google verification -->
         <meta name="google-site-verification" content="BkaAClfMxLbft0buc12WMxxVYhEeRgnbUwufgEdK_Qo" />
+
+        <meta name="google-site-verification" content="0BqRQ18B4tjgHl5Wl2xgvn-jBDQ-_DQu1xYxO_pdPfI" />
     </head>
 
     <body>
@@ -81,8 +83,9 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu rounded">
-                                    <a href="{% url 'blankpage' %}" class="dropdown-item">Our Blog</a>
-                                    <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
+                                    <a href="{% url 'blog' %}" class="dropdown-item">Our Blog</a>
+                                    <a href="{% url 'enroll' %}" class="dropdown-item">Enroll</a>
+                                    <!-- <a href="{% url 'team' %}" class="dropdown-item">Our Team</a> -->
                                 </div>
                             </div>
                             <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
@@ -136,7 +139,7 @@
                             <a href="{% url 'contact' %}" class="mb-2 text-white d-block"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
                             <a href="#services" class="mb-2 text-white d-block"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
                             <a href="{% url 'projects' %}" class="mb-2 text-white d-block"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a>
-                            <a href="{% url 'blankpage' %}" class="mb-2 text-white d-block"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+                            <a href="{% url 'blog' %}" class="mb-2 text-white d-block"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
                         </div>
                     </div>
                 </div>                                                                     
