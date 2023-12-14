@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block incomingcontent %}
+
+        <!-- Enroll Start -->
+        <div class="container-fluid py-5 my-5 wow fadeIn" data-wow-delay="0.3s">
+            <div class="container text-center py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h2 class="display-4"><span> <i class="bi bi-exclamation-triangle text-primary"></i></span> Enrollment Closed</h2>
+                        <h1 class="mb-4">We've Reached Full Capacity</h1>
+                        <p class="mb-4">Thank you for your incredible response! Regrettably, our application capacity has been reached, and enrollment is now closed. We appreciate your interest and hope to connect with you in the future.</p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="{% url 'home' %}">Take me home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Enroll End -->
+
+{% endblock incomingcontent %}
