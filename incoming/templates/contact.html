@@ -1,94 +1,159 @@
-{% extends 'base.html' %}
-
-{% block incomingcontent %}
+{% extends 'base.html' %} {% block incomingcontent %}
 
 <!-- Contact Start -->
 <div class="container-fluid py-5 mt-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-            <h5 class="text-primary">Get In Touch</h5>
-            <h1 class="mb-3">Contact for any query</h1>
-        </div>
-        <div class="contact-detail position-relative p-3 p-md-5">
-            <div class="row g-3 g-md-5 mb-5 justify-content-center">
-                <!-- Address -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
-                    <div class="d-flex bg-light p-3 rounded">
-                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                            <i class="fas fa-map-marker-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h4 class="text-primary">Address</h4>
-                            <a href="https://maps.app.goo.gl/H5UCUdRsZnQbR5Wx8" target="_self" class="h5">Mombasa</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Call Us -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                    <div class="d-flex bg-light p-3 rounded">
-                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                            <i class="fa fa-phone text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h4 class="text-primary">Call Us</h4>
-                            <a class="h5" href="tel:+0123456789" target="_self">0713118765 | 0796807438</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Email Us -->
-                <div class="col-md-12 col-lg-4 wow fadeIn" data-wow-delay=".7s">
-                    <div class="d-flex bg-light p-3 rounded">
-                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
-                            <i class="fa fa-envelope text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h4 class="text-primary">Email Us</h4>
-                            <a class="h5" href="mailto:janjaprogrammers@gmail.com" target="_self">janjaprogrammers@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Map and Form -->
-            <div class="row g-3 g-md-5">
-                <!-- Map -->
-                <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
-                    <div class="p-3 p-md-5 h-100 rounded contact-map">
-                        <iframe class="rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1771.9022550438951!2d39.65691068073156!3d-4.039478490186847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012bab94dd2f9%3A0x3fb0d5e8bbc88dc3!2sTudor%2C%20Mombasa!5e0!3m2!1sen!2ske!4v1697874833907!5m2!1sen!2ske"
-                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
-                    <div class="p-3 p-md-5 rounded contact-form">
-                        <form method="post" action="{% url 'send_email' %}">
-                            {% csrf_token %}
-                            <div class="mb-3">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Your Name" name="your_name">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control border-0 py-3" placeholder="Your Email" name="your_email">
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" class="form-control border-0 py-3" placeholder="Subject" name="subject">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="w-100 form-control border-0 py-3" rows="6" cols="10" placeholder="Hello janjaprogrammers...." required
-                                    name="message"></textarea>
-                            </div>
-                            <div class="text-start">
-                                <button class="btn bg-primary text-white py-3 px-5" type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container py-5">
+    <div
+      class="text-center mx-auto pb-5 wow fadeIn"
+      data-wow-delay=".3s"
+      style="max-width: 600px"
+    >
+      <h5 class="text-primary">Get In Touch</h5>
+      <h1 class="mb-3">Contact for any query</h1>
     </div>
+    <div class="contact-detail position-relative p-3 p-md-5">
+      <div class="row g-3 g-md-5 mb-5 justify-content-center">
+        <!-- Address -->
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".3s">
+          <div class="d-flex bg-light p-3 rounded">
+            <div
+              class="flex-shrink-0 btn-square bg-secondary rounded-circle"
+              style="width: 64px; height: 64px"
+            >
+              <i class="fas fa-map-marker-alt text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h4 class="text-primary">Address</h4>
+              <a
+                href="https://maps.app.goo.gl/H5UCUdRsZnQbR5Wx8"
+                target="_self"
+                class="h5"
+                >Mombasa</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Call Us -->
+        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay=".5s">
+          <div class="d-flex bg-light p-3 rounded">
+            <div
+              class="flex-shrink-0 btn-square bg-secondary rounded-circle"
+              style="width: 64px; height: 64px"
+            >
+              <i class="fa fa-phone text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h4 class="text-primary">Call Us</h4>
+              <a class="h5" href="tel:+0123456789" target="_self"
+                >0713118765 | 0796807438</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Us -->
+        <div class="col-md-12 col-lg-4 wow fadeIn" data-wow-delay=".7s">
+          <div class="d-flex bg-light p-3 rounded">
+            <div
+              class="flex-shrink-0 btn-square bg-secondary rounded-circle"
+              style="width: 64px; height: 64px"
+            >
+              <i class="fa fa-envelope text-white"></i>
+            </div>
+            <div class="ms-3">
+              <h4 class="text-primary">Email Us</h4>
+              <a
+                class="h5"
+                href="mailto:janjaprogrammers@gmail.com"
+                target="_self"
+                >janjaprogrammers@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map and Form -->
+      <div class="row g-3 g-md-5">
+        <!-- Map -->
+        <div class="col-lg-6 wow fadeIn" data-wow-delay=".3s">
+          <div class="p-3 p-md-5 h-100 rounded contact-map">
+            <iframe
+              class="rounded w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1771.9022550438951!2d39.65691068073156!3d-4.039478490186847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012bab94dd2f9%3A0x3fb0d5e8bbc88dc3!2sTudor%2C%20Mombasa!5e0!3m2!1sen!2ske!4v1697874833907!5m2!1sen!2ske"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-6 wow fadeIn" data-wow-delay=".5s">
+          <div class="p-3 p-md-5 rounded contact-form">
+            <form method="post" action="{% url 'send_email' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control border-0 py-3"
+                  placeholder="Your Name"
+                  name="your_name"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control border-0 py-3"
+                  placeholder="Your Email"
+                  name="your_email"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control border-0 py-3"
+                  placeholder="Subject"
+                  name="subject"
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="w-100 form-control border-0 py-3"
+                  rows="6"
+                  cols="10"
+                  placeholder="Hello janjaprogrammers...."
+                  required
+                  name="message"
+                ></textarea>
+              </div>
+              <div class="text-start">
+                <button
+                  class="btn bg-primary text-white py-3 px-5"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Contact End -->
+
+<script>
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Your message has been sent",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+</script>
 
 {% endblock incomingcontent %}
