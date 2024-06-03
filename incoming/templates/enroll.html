@@ -1,21 +1,180 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block incomingcontent %} {% load static %}
 
-{% block incomingcontent %}
-
-        <!-- Enroll Start -->
-        <div class="container-fluid py-5 my-5 wow fadeIn" data-wow-delay="0.3s">
-            <div class="container text-center py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h2 class="display-4"><span> <i class="bi bi-exclamation-triangle text-primary"></i></span> Enrollment Closed</h2>
-                        <h3 class="m-4">Enrolled but haven't received any information yet?</h3>
-                        <p class="mb-4">Feel free to send us an email through: <span><a href="mailto:janjaprogrammers@gmail.com">janjaprogrammers@gmail.com</a></span></p>
-                        <p class="mb-4">Thank you for your incredible response! Regrettably, our application capacity has been reached, and enrollment is now closed. We appreciate your interest and hope to connect with you in the future.</p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="{% url 'home' %}">Take me home</a>
-                    </div>
-                </div>
-            </div>
+<!-- Workshop Start -->
+<div class="container-fluid py-5 my-5">
+  <div class="container py-3">
+    <div class="row g-2">
+      <div class="col-lg-5 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".3s">
+        <div class="h-100">
+          <img
+            src="{% static 'img/poster.png' %}"
+            class="img-fluid w-75 rounded"
+            alt="Django Workshop Poster"
+            style="margin-bottom: 25%"
+          />
         </div>
-        <!-- Enroll End -->
+      </div>
+      <div class="col-lg-7 col-md-6 col-sm-12 wow fadeIn" data-wow-delay=".5s">
+        <h4 class="text-primary mb-3">Master the Art of Web Development</h4>
+        <h5 class="mb-3">Online Django Workshop</h5>
+        <p class="mb-2">
+          Dive into the world of web development with our comprehensive Django
+          workshop. This online course is designed to equip you with the skills
+          needed to build robust and dynamic websites using Django, the
+          high-level Python web framework.
+        </p>
+        <p class="mb-2">
+          Starting on <strong>July 1st, 2024</strong> and concluding on
+          <strong>September 27th, 2024</strong>, this workshop is perfect for
+          beginners and intermediate developers looking to enhance their web
+          development prowess.
+        </p>
+        <span class="mb-2">
+          For just <strong>Ksh 1500</strong>, you'll gain access to:
+          <ul>
+            <li>Expert-led live sessions</li>
+            <li>Hands-on projects and assignments</li>
+            <li>Peer collaboration and networking</li>
+            <li>A certificate of completion</li>
+          </ul>
+        </span>
+        <p class="mb-2">
+          Don't miss this opportunity to learn from the best and start building
+          your own web applications. Seats are limited, so ensure your spot
+          today!
+        </p>
+
+        <!-- Contact Form -->
+        <div class="col-lg-12 wow fadeIn" data-wow-delay=".5s">
+          <div class="p-3 p-md-5 rounded contact-form">
+            <form
+              id="paymentRequestForm"
+              method="post"
+              action="{% url 'request_payment' %}"
+            >
+              {% csrf_token %}
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control border-0 py-3"
+                  placeholder="Your Name (Required)"
+                  name="your_name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control border-0 py-3"
+                  placeholder="Your Email"
+                  name="your_email"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control border-0 py-3"
+                  placeholder="WhatsApp Phone Number"
+                  name="phone"
+                />
+              </div>
+              <div class="text-start">
+                <button
+                  class="btn bg-primary text-white py-3 px-5"
+                  type="submit"
+                >
+                  Request Payment information
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div
+          class="modal fade"
+          id="confirmationModal"
+          tabindex="-1"
+          aria-labelledby="confirmationModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="confirmationModalLabel">
+                  Form Submission
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                {% for message in messages %} {{ message }} break;{% endfor %}
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Workshop End -->
+<script>
+  document
+    .getElementById("paymentRequestForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      var formData = new FormData(this);
+      var submitButton = document.querySelector('button[type="submit"]');
+      submitButton.textContent = "Loading..."; // Provide loading feedback
+      submitButton.disabled = true; // Disable the button to prevent multiple submissions
+
+      fetch(this.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          "X-CSRFToken": "{{ csrf_token }}",
+        },
+      })
+        .then((response) => {
+          submitButton.textContent = "Request Payment information"; // Reset button text
+          submitButton.disabled = false; // Re-enable the button
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          var myModal = new bootstrap.Modal(
+            document.getElementById("confirmationModal")
+          );
+          document.querySelector("#confirmationModal .modal-body").textContent =
+            data.message;
+          myModal.show();
+          // Redirect after closing the modal
+          document
+            .querySelector("#confirmationModal .btn-close")
+            .addEventListener("click", function () {
+              window.location.href = '{% url "home" %}'; // Replace "home" with the name of your home URL pattern
+            });
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          // Handle the error, maybe show a different message in the modal
+        });
+    });
+</script>
 
 {% endblock incomingcontent %}

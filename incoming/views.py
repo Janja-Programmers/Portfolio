@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.core.mail import send_mail
 from django.urls import reverse
-
+from django.http import JsonResponse
 
 # Create your views here.
 def home(request):
@@ -56,6 +56,34 @@ def send_email_view(request):
                 raise ConnectionRefusedError(e)
     
     return render(request, 'contact.html')
+
+
+
+
+def request_payment(request):
+    if request.method == 'POST':
+        name = request.POST.get('your_name')
+        email = request.POST.get('your_email')
+        phone = request.POST.get('phone')
+
+        # Customize the message content
+        your_custom_message = f"Applicant's Name: {name}\n\nContact Details:\n\tEmail: {email}\n\tPhone:\n{phone}"
+
+        try:
+            send_mail(
+                "PAYMENT REQUEST FORM",
+                your_custom_message,
+                'janjaprogrammers@gmail.com',
+                ['janjaprogrammers@gmail.com'],
+                fail_silently=False,
+            )
+            return JsonResponse({'message': 'Your request has been received. We will send the payment details to your provided contact information shortly.'})
+        except Exception as e:
+            return JsonResponse({'message': 'There was an error processing your request. Please try again.'}, status=500)
+
+    # If not POST method, or any other issue
+    return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
 
 def enroll(request):
     return render(request, 'enroll.html')

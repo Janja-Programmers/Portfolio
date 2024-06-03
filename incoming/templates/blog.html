@@ -1,157 +1,280 @@
-{% extends 'base.html' %}
-
-{% load static %}
-
-{% block incomingcontent %}
+{% extends 'base.html' %} {% load static %} {% block incomingcontent %}
 <div class="container-fluid blog my-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-            <h5 class="text-primary">Our Blog</h5>
-            <h1>Latest Blog & News</h1>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8">
-                <div class="content">
-                    <div class="card-title">
-                        <h3 class="pb-3">Janja Programmers Chronicles: Crafting Success from Campus to Commerce</h3>
-                        <div class="card mb-5 mt-5">
-                            <!-- <div class="blog-btn-icon btn btn-secondary px-4 py-3 rounded-pill ">
-                                <div class="blog-icon-1">
-                                    <p class="text-white px-2">Share<i class="fa fa-arrow-right ms-3"></i></p>
-                                </div>
-                            </div> -->
-                            <img src="{% static 'img/programming-2.jpg' %}" alt="" class="rounded" style="height: 60vh;">
-                            <div class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom">
-                                <a href="" class="text-white"><small><i class="fas fa-share me-2 text-secondary"></i>10 Share(s)</small></a>
-                                <a href="" class="text-white"><small><i class="fa fa-comments me-2 text-secondary"></i>2 Comments</small></a>
-                            </div>
-                        </div>                        
-                        <div class="content">
-                            <div>
-                                <h3 class="card-title">Introduction:</h3>
-                                <p class="card-text">
-                                    Greetings, fellow adventurers in the digital realm! As you step into the heart of Janja Programmers' blog, prepare to embark on a captivating journey – our journey. Join us as we rewind the tape, sharing the story of two buddies who transformed coding challenges into a thriving software development venture.
-                                </p>
-
-                                <h3 class="card-title">
-                                    Chapter 1: The Campus Chronicles
-                                </h3>
-                                <p class="card-text">
-                                    In the early days, we found ourselves immersed in the world of algorithms and data structures, navigating through the maze of coding challenges. What started as late-night coding sessions to help out coursemates soon became the seed of inspiration that sprouted into Janja Programmers.
-                                </p>
-
-                                <h3 class="card-title">
-                                    Chapter 2: Crafting Portfolios, Crafting Dreams
-                                </h3>
-                                <p class="card-text">
-                                    As our skills evolved, so did our ambitions. We decided to craft our own digital identities, weaving intricate portfolios that reflected not just our technical prowess but also our unique perspectives on problem-solving. Little did we know, these portfolios would be the key to unlocking new opportunities.
-                                </p>
-
-                                <h3 class="card-title">
-                                    Chapter 3: A Leap into the Professional Arena
-                                </h3>
-                                <p class="card-text">
-                                    The universe works in mysterious ways. A chance opportunity landed us as junior interns at an e-commerce giant. Here, amidst the lines of code that powered a bustling online marketplace, we saw the potential to transform our dreams into reality. The spark to start our own company ignited, and the Janja Programmers flame was born.
-                                </p>
-
-                                <h3 class="card-title">
-                                    Interlude: A Visual Odyssey
-                                </h3>
-                                <p class="card-text">
-                                    Explore our interactive timeline below, featuring snippets of code, snapshots from our campus days, and behind-the-scenes glimpses of our journey. Swipe, click, and dive deeper into the moments that shaped us.
-                                </p>
-
-                                <h3 class="card-title">
-                                    Chapter 4: From Junior Interns to Founders
-                                </h3><p class="card-text">The transition from interns to founders was not without its challenges. But every bug, every late-night debugging session, and every triumph fueled our determination. We took the plunge, armed with a vision to create not just software but experiences that resonate with our clients and users alike.</p>
-
-                                <h3 class="card-title">Conclusion: Crafting Tomorrow's Code</h3><p class="card-text">As you navigate through our blog, we hope our story sparks inspiration and kindles the flames of passion within you. Janja Programmers is more than a company; it's a testament to the endless possibilities that unfold when two buddies decide to turn dreams into reality. Join us on this ongoing adventure, where every line of code is a brushstroke, and every project is a masterpiece in the making.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="container">
-                    <img class="img-fluid" src="{% static 'img/programming-2.jpg' %}" alt="" class="rounded img-fluid" style="width: 80px; height: 80px;">
-                    <h3 class="card-title">
-                        Janja Programmers
-                    </h3>
-                    <p class="card-text p-2">
-                        Authored by designers and developers of Janja Programmers
-                    </p>
-
-                    <div class="card p-2 m-2">
-                        <h2 class="card-title">Tags</h2>
-                        <p class="card-text bg-light p-1 rounded">Front-End Web Development</p>
-                        <p class="card-text bg-light p-1 rounded">Back-End Web Development</p>
-                        <p class="card-text bg-light p-1 rounded">Intro to GitHub</p>
-                        <p class="card-text bg-light p-1 rounded">More Blogs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container py-5">
+    <div
+      class="text-center mx-auto pb-5 wow fadeIn"
+      data-wow-delay=".3s"
+      style="max-width: 600px"
+    >
+      <h5 class="text-primary">Our Blog</h5>
+      <h1>Latest Blog & News</h1>
     </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="content">
+          <div class="card-title">
+            <h3 class="pb-3">
+              Janja Programmers Chronicles: Crafting Success from Campus to
+              Commerce
+            </h3>
+            <div class="card mb-5 mt-5">
+              <img
+                src="{% static 'img/programming-2.jpg' %}"
+                alt=""
+                class="rounded"
+                style="height: 60vh"
+              />
+              <div
+                class="blog-coment d-flex justify-content-between px-4 py-2 border bg-primary rounded-bottom"
+              >
+                <a href="" class="text-white"
+                  ><small
+                    ><i class="fas fa-share me-2 text-secondary"></i>10
+                    Share(s)</small
+                  ></a
+                >
+                <a href="" class="text-white"
+                  ><small
+                    ><i class="fa fa-comments me-2 text-secondary"></i>2
+                    Comments</small
+                  ></a
+                >
+              </div>
+            </div>
+            <div class="content">
+              <div>
+                <h3 class="card-title">Introduction:</h3>
+                <p class="card-text">
+                  Greetings, fellow adventurers in the digital realm! As you
+                  step into the heart of Janja Programmers' blog, prepare to
+                  embark on a captivating journey – our journey. Join us as we
+                  rewind the tape, sharing the story of two buddies who
+                  transformed coding challenges into a thriving software
+                  development venture.
+                </p>
+
+                <h3 class="card-title">Chapter 1: The Campus Chronicles</h3>
+                <p class="card-text">
+                  In the early days, we found ourselves immersed in the world of
+                  algorithms and data structures, navigating through the maze of
+                  coding challenges. What started as late-night coding sessions
+                  to help out coursemates soon became the seed of inspiration
+                  that sprouted into Janja Programmers.
+                </p>
+
+                <h3 class="card-title">
+                  Chapter 2: Crafting Portfolios, Crafting Dreams
+                </h3>
+                <p class="card-text">
+                  As our skills evolved, so did our ambitions. We decided to
+                  craft our own digital identities, weaving intricate portfolios
+                  that reflected not just our technical prowess but also our
+                  unique perspectives on problem-solving. Little did we know,
+                  these portfolios would be the key to unlocking new
+                  opportunities.
+                </p>
+
+                <h3 class="card-title">
+                  Chapter 3: A Leap into the Professional Arena
+                </h3>
+                <p class="card-text">
+                  The universe works in mysterious ways. A chance opportunity
+                  landed us as junior interns at an e-commerce giant. Here,
+                  amidst the lines of code that powered a bustling online
+                  marketplace, we saw the potential to transform our dreams into
+                  reality. The spark to start our own company ignited, and the
+                  Janja Programmers flame was born.
+                </p>
+
+                <h3 class="card-title">Interlude: A Visual Odyssey</h3>
+                <p class="card-text">
+                  Explore our interactive timeline below, featuring snippets of
+                  code, snapshots from our campus days, and behind-the-scenes
+                  glimpses of our journey. Swipe, click, and dive deeper into
+                  the moments that shaped us.
+                </p>
+
+                <h3 class="card-title">
+                  Chapter 4: From Junior Interns to Founders
+                </h3>
+                <p class="card-text">
+                  The transition from interns to founders was not without its
+                  challenges. But every bug, every late-night debugging session,
+                  and every triumph fueled our determination. We took the
+                  plunge, armed with a vision to create not just software but
+                  experiences that resonate with our clients and users alike.
+                </p>
+
+                <h3 class="card-title">Conclusion: Crafting Tomorrow's Code</h3>
+                <p class="card-text">
+                  As you navigate through our blog, we hope our story sparks
+                  inspiration and kindles the flames of passion within you.
+                  Janja Programmers is more than a company; it's a testament to
+                  the endless possibilities that unfold when two buddies decide
+                  to turn dreams into reality. Join us on this ongoing
+                  adventure, where every line of code is a brushstroke, and
+                  every project is a masterpiece in the making.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="container">
+          <img
+            class="img-fluid"
+            src="{% static 'img/programming-2.jpg' %}"
+            alt=""
+            class="rounded img-fluid"
+            style="width: 80px; height: 80px"
+          />
+          <h3 class="card-title">Janja Programmers</h3>
+          <p class="card-text p-2">
+            Authored by designers and developers of Janja Programmers
+          </p>
+
+          <div class="card p-2 m-2">
+            <h2 class="card-title">Tags</h2>
+            <p class="card-text bg-light p-1 rounded">
+              Front-End Web Development
+            </p>
+            <p class="card-text bg-light p-1 rounded">
+              Back-End Web Development
+            </p>
+            <p class="card-text bg-light p-1 rounded">Intro to GitHub</p>
+            <p class="card-text bg-light p-1 rounded">More Blogs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container mb-5">
-    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-        <div class="col-lg-6">
-            <h1 class="display-5 mb-0">Upcoming Articles</h1>
-        </div>
+  <div
+    class="row g-5 mb-5 wow fadeInUp"
+    data-wow-delay="0.1s"
+    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp"
+  >
+    <div class="col-lg-6">
+      <h1 class="display-5 mb-0">Upcoming Articles</h1>
     </div>
-    
-    <div class="row g-4">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <div class="service-item d-flex flex-column flex-sm-row bg-secondary rounded h-100 p-4 p-lg-5">
-                <div class="bg-icon flex-shrink-0 mb-3">
-                    <i class="fa fa-code-branch fa-2x text-dark"></i>
-                </div>
-                <div class="ms-sm-4">
-                    <h4 class="mb-3">Introduction to GitHub</h4>
-                    <span class="text-dark">This article is coming up soon. Get ready to learn how to save your projects in the cloud.</span>
-                </div>
-            </div>
-        </div>
+  </div>
 
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <div class="service-item d-flex flex-column flex-sm-row bg-dark rounded h-100 p-4 p-lg-5">
-                <div class="bg-icon flex-shrink-0 mb-3">
-                    <i class="fa fa-database fa-2x text-light"></i>
-                </div>
-                <div class="ms-sm-4">
-                    <h4 class="mb-3 text-light">Back End Web Development</h4>
-                    <span class="text-light">Introduction to how data is managed in a website.There is a lot to learn. Keep tuned in...</span>
-                </div>
-            </div>
+  <div class="row g-4">
+    <div
+      class="col-lg-6 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="
+        visibility: visible;
+        animation-delay: 0.1s;
+        animation-name: fadeInUp;
+      "
+    >
+      <div
+        class="service-item d-flex flex-column flex-sm-row bg-secondary rounded h-100 p-4 p-lg-5"
+      >
+        <div class="bg-icon flex-shrink-0 mb-3">
+          <i class="fa fa-code-branch fa-2x text-dark"></i>
         </div>
-
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <div class="service-item d-flex flex-column flex-sm-row bg-dark rounded h-100 p-4 p-lg-5">
-                <div class="bg-icon flex-shrink-0 mb-3">
-                    <i class="fa fa-blog fa-2x text-light"></i>
-                </div>
-                <div class="ms-sm-4">
-                    <h4 class="mb-3 text-light">Blogging posts</h4>
-                    <span class="text-light">Coding brought to you by Janja Programmers. Don't drop that dial...</span>
-                </div>
-            </div>
+        <div class="ms-sm-4">
+          <h4 class="mb-3">Introduction to GitHub</h4>
+          <span class="text-dark"
+            >Learn GitHub from our detailed
+            <a
+              href="https://www.youtube.com/watch?v=gfpHsua-80g&list=PLdVeTHIYtl-UtCMtd47Mkv_-tDE0V4677&pp=iAQB"
+              ><b>youtube videos</b></a
+            >
+            or by connecting to our <a href="https://chat.whatsapp.com/Hw5TSU7p2UzJAyPtPxLgjC"><b>WhatsApp Community</b></a
+            >.</span
+          >
         </div>
-
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-            <div class="service-item d-flex flex-column flex-sm-row bg-secondary rounded h-100 p-4 p-lg-5">
-                <div class="bg-icon flex-shrink-0 mb-3">
-                    <i class="fa fa-laptop-code fa-2x text-dark"></i>
-                </div>
-                <div class="ms-sm-4">
-                    <h4 class="mb-3">Front End Web Development</h4>
-                    <span class="text-dark">Learn all the basics of web development just as a simple game.</span>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div
+      class="col-lg-6 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="
+        visibility: visible;
+        animation-delay: 0.1s;
+        animation-name: fadeInUp;
+      "
+    >
+      <div
+        class="service-item d-flex flex-column flex-sm-row bg-dark rounded h-100 p-4 p-lg-5"
+      >
+        <div class="bg-icon flex-shrink-0 mb-3">
+          <i class="fa fa-database fa-2x text-light"></i>
+        </div>
+        <div class="ms-sm-4">
+          <h4 class="mb-3 text-light">Django Web Development</h4>
+          <span class="text-light"
+            >Learn Web Development using Django in the upcoming course from July
+            1st to September 27th | 2024</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-lg-6 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="
+        visibility: visible;
+        animation-delay: 0.1s;
+        animation-name: fadeInUp;
+      "
+    >
+      <div
+        class="service-item d-flex flex-column flex-sm-row bg-dark rounded h-100 p-4 p-lg-5"
+      >
+        <div class="bg-icon flex-shrink-0 mb-3">
+          <i class="fa fa-blog fa-2x text-light"></i>
+        </div>
+        <div class="ms-sm-4">
+          <h4 class="mb-3 text-light">Blogging posts</h4>
+          <span class="text-light"
+            >Coding brought to you by Janja Programmers. Don't drop that
+            dial...</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-lg-6 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="
+        visibility: visible;
+        animation-delay: 0.1s;
+        animation-name: fadeInUp;
+      "
+    >
+      <div
+        class="service-item d-flex flex-column flex-sm-row bg-secondary rounded h-100 p-4 p-lg-5"
+      >
+        <div class="bg-icon flex-shrink-0 mb-3">
+          <i class="fa fa-laptop-code fa-2x text-dark"></i>
+        </div>
+        <div class="ms-sm-4">
+          <h4 class="mb-3">Front End Web Development</h4>
+          <span class="text-dark"
+            >Learn all the basics of web development just as a simple game.
+            Follow our
+            <a
+              href="https://www.youtube.com/watch?v=gfpHsua-80g&list=PLdVeTHIYtl-U0-b_IB8ddbePRW1kM33_K&pp=iAQB"
+              ><b>Youtube channel</b></a
+            >
+            for more details</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock incomingcontent %}
