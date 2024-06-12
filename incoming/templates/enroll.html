@@ -136,12 +136,13 @@
     .getElementById("paymentRequestForm")
     .addEventListener("submit", function (event) {
       event.preventDefault();
-      var formData = new FormData(this);
+      var form = this;
+      var formData = new FormData(form);
       var submitButton = document.querySelector('button[type="submit"]');
       submitButton.textContent = "Loading..."; // Provide loading feedback
       submitButton.disabled = true; // Disable the button to prevent multiple submissions
 
-      fetch(this.action, {
+      fetch(form.action, {
         method: "POST",
         body: formData,
         headers: {
@@ -163,6 +164,8 @@
           document.querySelector("#confirmationModal .modal-body").textContent =
             data.message;
           myModal.show();
+          // Reset form fields
+          form.reset();
           // Redirect after closing the modal
           document
             .querySelector("#confirmationModal .btn-close")
