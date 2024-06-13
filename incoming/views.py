@@ -43,7 +43,7 @@ def send_email_view(request):
             email_sending_successful = send_mail(
                 f"Feedback Form: {subject}",
                 your_custom_message,
-                'no-reply@yourdomain.com',
+                'janjaprogrammers@gmail.com',
                 ['janjaprogrammers@gmail.com'],
                 fail_silently=False,
             )
