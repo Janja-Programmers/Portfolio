@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janja Programmers</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Template Stylesheet -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{% static 'img/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'img/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'img/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'img/site.webmanifest' %}" />
+  </head>
+  <body>
+    <!-- Header with Navigation Menu -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <!-- Logos for large and small screens -->
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <img
+              src="{% static 'img/primary-logo.png' %}"
+              alt="Janja Programmers Logo"
+            />
+          </a>
+          <!-- Navbar Toggle Button for Mobile -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar Links and Buttons -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'services' %}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'projects' %}">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+            </ul>
+            <!-- Call and Appointment Buttons -->
+            <div class="d-flex align-items-center">
+              <a
+                href="tel:+254794933942"
+                class="btn btn-outline-primary call-btn rounded-pill me-2"
+              >
+                Call: 0794 933 942
+              </a>
+              <a
+                href="{% url 'appointment' %}"
+                class="btn btn-primary appointment-btn rounded-pill"
+              >
+                Book Appointment
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content Block -->
+    <main class="container my-5">{% block content %}{% endblock %}</main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-light pt-4">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Information -->
+          <div class="col-md-6">
+            <h5>Contact Us</h5>
+            <p>Mombasa, Kenya</p>
+            <p><strong>Phone:</strong> +254 794 933 942</p>
+            <p><strong>Email:</strong> janjaprogrammers@gmail.com</p>
+          </div>
+
+          <!-- Quick Links (optional for footer menu) -->
+          <div class="col-md-6">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="{% url 'home' %}" class="text-light">Home</a></li>
+              <li><a href="" class="text-light">About</a></li>
+              <li>
+                <a href="#" class="text-light">Services</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Projects</a>
+              </li>
+              <li>
+                <a href="#" class="text-light">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="my-3 text-secondary" />
+
+        <!-- Footer Bottom -->
+        <div class="text-center pb-3">
+          <small>&copy; 2024 Janja Programmers. All Rights Reserved.</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper via CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

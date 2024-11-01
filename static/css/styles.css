@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #006039;
+  --secondary-color: #a37e2c;
+  --tertiary-color: #2596be;
+  --white-color: #fff;
+  --font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  padding-top: 70px; /* Adjust based on navbar height */
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color); /* Ensures background color */
+  transition: background-color 0.3s ease;
+}
+
+/* Logo Styling */
+.navbar-brand img {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+/* Navbar Links Styling */
+.navbar-light .navbar-nav .nav-link {
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 0 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--secondary-color);
+}
+
+/* Navbar Links Spacing */
+.navbar-nav {
+  gap: 20px; /* Adds consistent space between links */
+  flex-direction: row;
+}
+
+/* Call-to-Action Buttons */
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.btn-primary {
+  background-color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e7a98;
+  border-color: #1e7a98;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  /* Stack navbar items vertically */
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Stack and center buttons */
+  .d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust Call-to-Action Button Spacing */
+  .call-btn {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
