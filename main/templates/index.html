@@ -1,18 +1,65 @@
 {% extends 'base.html' %} {% block content %}
-<div class="container mt-5">
-  <h2 class="text-center">Testimonials</h2>
-  <p class="text-muted text-center">What our clients say about us</p>
-  <!-- Bootstrap cards or carousel to display testimonials -->
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text">"Amazing service!"</p>
-          <p class="text-muted">- Client Name</p>
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <!-- Text Section -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h1 class="display-5 fw-bold">Enabling 1M+ Visionaries</h1>
+        <p class="lead mb-3">
+          We build with visionaries to turn ideas into widely adopted products
+        </p>
+        <p class="text-muted">Quality . Security . Scalable</p>
+        <div
+          class="d-flex flex-column flex-lg-row gap-3 justify-content-center justify-content-lg-start mt-3"
+        >
+          <a href="#" class="btn btn-primary">Request Quote</a>
+          <a href="mailto:info@yourwebsite.com" class="btn btn-outline-light"
+            >info@yourwebsite.com</a
+          >
+          <a href="tel:+254707021821" class="btn btn-outline-light"
+            >Call: +254 707 021 821</a
+          >
         </div>
       </div>
+      <!-- Image Section -->
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <img
+          src="https://via.placeholder.com/400x500"
+          alt="Person Image"
+          class="img-fluid hero-image"
+        />
+      </div>
     </div>
-    <!-- Repeat for each testimonial -->
   </div>
-</div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+  .hero-section {
+    padding: 4rem 0;
+  }
+  .hero-section .display-5 {
+    font-weight: 700;
+    color: #083c5a;
+  }
+  .hero-section .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #083c5a;
+  }
+  .btn-primary {
+    background-color: #083c5a;
+    border-color: #083c5a;
+  }
+  .btn-outline-light {
+    color: #083c5a;
+    border-color: #083c5a;
+  }
+  .hero-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>
 {% endblock %}
