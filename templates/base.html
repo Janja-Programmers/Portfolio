@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Janja Programmers</title>
 
+    <!-- Font Awesome Link -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Bootstrap CSS via CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -40,9 +45,9 @@
   <body>
     <!-- Header with Navigation Menu -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container">
-          <!-- Logos for large and small screens -->
+          <!-- Logo -->
           <a class="navbar-brand" href="{% url 'home' %}">
             <img
               src="{% static 'img/primary-logo.png' %}"
@@ -82,12 +87,12 @@
               </li>
             </ul>
             <!-- Call and Appointment Buttons -->
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center">
               <a
                 href="tel:+254794933942"
                 class="btn btn-outline-primary call-btn rounded-pill me-2"
               >
-                Call: 0794 933 942
+                Call: +254 794 933 942
               </a>
               <a
                 href="{% url 'appointment' %}"
@@ -105,41 +110,72 @@
     <main class="container my-5">{% block content %}{% endblock %}</main>
 
     <!-- Footer Section -->
-    <footer class="bg-dark text-light pt-4">
+    <footer
+      class="bg-primary text-white mt-5 py-4 position-fixed w-100"
+      style="bottom: 0"
+    >
       <div class="container">
-        <div class="row">
-          <!-- Contact Information -->
-          <div class="col-md-6">
-            <h5>Contact Us</h5>
-            <p>Mombasa, Kenya</p>
-            <p><strong>Phone:</strong> +254 794 933 942</p>
-            <p><strong>Email:</strong> janjaprogrammers@gmail.com</p>
+        <div class="row text-md-start">
+          <!-- Company Info -->
+          <div class="col-12 col-md-5 mb-3">
+            <h5>About Us</h5>
+            <p class="small">
+              Janja Programmers is a leading software company specializing in
+              innovative and efficient tech solutions to empower businesses.
+            </p>
           </div>
 
-          <!-- Quick Links (optional for footer menu) -->
-          <div class="col-md-6">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="{% url 'home' %}" class="text-light">Home</a></li>
-              <li><a href="" class="text-light">About</a></li>
-              <li>
-                <a href="#" class="text-light">Services</a>
-              </li>
-              <li>
-                <a href="#" class="text-light">Projects</a>
-              </li>
-              <li>
-                <a href="#" class="text-light">Contact</a>
-              </li>
-            </ul>
+          <!-- Social Media Links -->
+          <div class="col-12 col-md-4 mb-4">
+            <h5 class="text-md-center text-start">Follow Us</h5>
+            <div
+              class="d-flex flex-row justify-content-start justify-content-md-center align-items-center gap-3"
+            >
+              <a
+                href="https://facebook.com/janjaprogrammers"
+                class="text-white"
+                target="_blank"
+                ><i class="fab fa-facebook-f fa-lg"></i
+              ></a>
+              <a
+                href="https://twitter.com/janjaprogrammers"
+                class="text-white"
+                target="_blank"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a
+                href="https://linkedin.com/company/janjaprogrammers"
+                class="text-white"
+                target="_blank"
+                ><i class="fab fa-linkedin-in fa-lg"></i
+              ></a>
+              <a
+                href="https://instagram.com/janjaprogrammers"
+                class="text-white"
+                target="_blank"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-12 col-md-3 mb-3">
+            <h5>Contact Us</h5>
+            <p class="small text-white">
+              <i class="fas fa-phone"></i> +254 794 933 942<br />
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@janjaprogrammers.com" class="text-white">
+                support@janjaprogrammers.com</a
+              ><br />
+            </p>
           </div>
         </div>
-
-        <hr class="my-3 text-secondary" />
-
         <!-- Footer Bottom -->
-        <div class="text-center pb-3">
-          <small>&copy; 2024 Janja Programmers. All Rights Reserved.</small>
+        <div class="text-center border-top pt-3 mt-3">
+          <small
+            >&copy; <span id="current-year"></span> Janja Programmers. Janja
+            Programmers. All rights reserved.</small
+          >
         </div>
       </div>
     </footer>
@@ -150,5 +186,9 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>

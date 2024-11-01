@@ -13,6 +13,13 @@ body {
   padding-top: 70px;
 }
 
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
 /* Navbar Styling */
 .navbar {
   position: fixed;
@@ -74,7 +81,7 @@ body {
 /* Responsive Styles for Small Screens */
 @media (max-width: 767px) {
   .navbar-brand img {
-    height: 40px;
+    height: 50px;
   }
 
   /* Stack navbar items vertically */
