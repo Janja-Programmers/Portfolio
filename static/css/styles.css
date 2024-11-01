@@ -10,7 +10,7 @@
 
 body {
   font-family: var(--font-family);
-  padding-top: 70px; /* Adjust based on navbar height */
+  padding-top: 70px;
 }
 
 /* Navbar Styling */
@@ -20,7 +20,7 @@ body {
   width: 100%;
   z-index: 1030;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: var(--white-color); /* Ensures background color */
+  background-color: var(--white-color);
   transition: background-color 0.3s ease;
 }
 
@@ -44,7 +44,7 @@ body {
 
 /* Navbar Links Spacing */
 .navbar-nav {
-  gap: 20px; /* Adds consistent space between links */
+  gap: 20px;
   flex-direction: row;
 }
 
