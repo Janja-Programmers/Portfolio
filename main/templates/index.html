@@ -1,34 +1,39 @@
-{% extends 'base.html' %} {% block content %}
-<!-- Hero Section -->
+{% extends "base.html" %} {% load static %} {% block content %}
 <section class="hero-section d-flex align-items-center">
   <div class="container">
-    <div class="row">
-      <!-- Text Section -->
-      <div class="col-lg-6 text-center text-lg-start">
-        <h1 class="display-5 fw-bold">Enabling 1M+ Visionaries</h1>
-        <p class="lead mb-3">
-          We build with visionaries to turn ideas into widely adopted products
+    <div class="row align-items-center h-100">
+      <!-- Left Side: Text Content -->
+      <div class="col-md-7 text-md-start text-center">
+        <h1 class="display-4 fw-bold">
+          Empowering Your Business with Innovative Tech Solutions
+        </h1>
+        <p class="lead text-muted mt-3">
+          We bring creativity and technology together to drive your business
+          forward. Let’s build a smarter future, together.
         </p>
-        <p class="text-muted">Quality . Security . Scalable</p>
-        <div
-          class="d-flex flex-column flex-lg-row gap-3 justify-content-center justify-content-lg-start mt-3"
+        <a
+          href="{% url 'services' %}"
+          class="btn btn-secondary btn-lg mt-3 rounded-pill"
+          >Learn More</a
         >
-          <a href="#" class="btn btn-primary">Request Quote</a>
-          <a href="mailto:info@yourwebsite.com" class="btn btn-outline-light"
-            >info@yourwebsite.com</a
-          >
-          <a href="tel:+254707021821" class="btn btn-outline-light"
-            >Call: +254 707 021 821</a
-          >
-        </div>
       </div>
-      <!-- Image Section -->
-      <div class="col-lg-6 text-center mt-4 mt-lg-0">
-        <img
-          src="https://via.placeholder.com/400x400"
-          alt="Person Image"
-          class="img-fluid hero-image"
-        />
+
+      <!-- Right Side: Image Content -->
+      <div class="col-md-5 d-flex justify-content-center position-relative">
+        <div class="image-wrapper position-relative">
+          <!-- Background Logo -->
+          <img
+            src="{% static 'img/secondary-logo.png' %}"
+            alt="Background Logo"
+            class="bg-logo position-absolute top-50 start-50 translate-middle img-fluid"
+          />
+          <!-- Main Image: Person with Laptop -->
+          <img
+            src="{% static 'img/main-1.png' %}"
+            alt="Person holding a laptop"
+            class="main-image position-relative img-fluid"
+          />
+        </div>
       </div>
     </div>
   </div>

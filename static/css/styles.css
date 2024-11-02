@@ -77,6 +77,23 @@ body {
   border-color: var(--secondary-color);
 }
 
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+  .call-btn {
+    display: none;
+  }
+}
+
 /* Responsive Styles for Small Screens */
 @media (max-width: 767px) {
   .navbar-brand img {
@@ -102,20 +119,41 @@ body {
   }
 }
 
-/* Hero */
-.hero-section {
-  padding: 4rem 0;
-}
-.hero-section .display-5 {
-  font-weight: 700;
-}
-.hero-section .lead {
-  font-size: 1.25rem;
-  font-weight: 400;
+/* Hero Section */
+.hero-section h1 {
+  color: var(--primary-color);
 }
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+.hero-section .image-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.hero-section .bg-logo {
+  width: 100%;
+  opacity: 0.15;
+  z-index: 1;
+}
+
+.hero-section .main-image {
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
 }
