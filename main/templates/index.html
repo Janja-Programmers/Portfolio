@@ -26,13 +26,13 @@
           <img
             src="{% static 'img/secondary-logo.png' %}"
             alt="Background Logo"
-            class="bg-logo position-absolute top-50 start-50 translate-middle img-fluid"
+            class="hero-bg-logo position-absolute top-50 start-50 translate-middle img-fluid"
           />
           <!-- Main Image: Person with Laptop -->
           <img
-            src="{% static 'img/main-1.png' %}"
+            src="{% static 'img/hero-1.png' %}"
             alt="Person holding a laptop"
-            class="main-image position-relative img-fluid"
+            class="hero-main-image position-relative img-fluid"
           />
         </div>
       </div>
@@ -41,10 +41,10 @@
 </section>
 
 <!-- About Section -->
-<section class="about-section py-5">
-  <div class="container text-center">
-    <!-- Heading and Description -->
-    <h2 class="fw-bold mb-4">
+<section id="about-section" class="text-center py-5">
+  <div class="container">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title">
       Software Development Company in Kenya | Janja Programmers
     </h2>
     <p class="lead text-muted mx-auto mb-5" style="max-width: 700px">
@@ -58,18 +58,225 @@
     <!-- Statistic Cards -->
     <div class="row justify-content-center">
       <div class="col-md-3 col-6 mb-4">
-        <div class="stat-card p-4 rounded-pill shadow-sm bg-primary text-white">
+        <div class="stat-card p-4 rounded shadow-sm bg-primary text-white">
           <h3 class="display-4">100+</h3>
           <p class="lead mb-0">Projects Completed</p>
         </div>
       </div>
       <div class="col-md-3 col-6 mb-4">
-        <div
-          class="stat-card p-4 rounded-pill shadow-sm bg-secondary text-white"
-        >
+        <div class="stat-card p-4 rounded shadow-sm bg-secondary text-white">
           <h3 class="display-4">200+</h3>
           <p class="lead mb-0">Happy Clients</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="what-we-do" class="text-center py-5">
+  <div class="container">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title">What we do</h2>
+    <p class="lead text-muted mx-auto mb-5" style="max-width: 700px">
+      We’ve got the skills and workforce you can rely on to push your business
+      to the next level.
+    </p>
+
+    <!-- Service Cards -->
+    <div class="row">
+      <!-- Card 1: Business Development -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Business Development</h5>
+            <p class="card-text">
+              By partnering with us, your business gains access to a dedicated
+              team of developers who seamlessly integrate with your existing
+              staff, aligning with your goals, processes, and culture.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Mobile Applications -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Mobile Applications</h5>
+            <p class="card-text">
+              Discover the leading Mobile App Development Company in Nairobi,
+              Kenya, specializing in Android and iOS development to serve your
+              mobile application needs.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Management Information Systems -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Management Information Systems</h5>
+            <p class="card-text">
+              We deliver end-to-end Information systems, ranging from Healthcare
+              to ERP systems for SMEs and Micro businesses.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Cards -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">AI & ML Development</h5>
+            <p class="card-text">
+              Helping enterprises develop intelligent products leveraging deep
+              learning and machine learning technology.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Low Code / No Code Development</h5>
+            <p class="card-text">
+              Build your MVP faster and test it with quick deployment rounds to
+              save you time and money.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Search Engine Optimization</h5>
+            <p class="card-text">
+              With over 10 years of experience in SEO, we help businesses
+              improve online visibility and reach more customers.
+            </p>
+            <a href="#" class="btn btn-outline-primary">View Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Development -->
+<section id="product-development" class="text-center py-5">
+  <div class="container">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title">Startup Product Development</h2>
+    <p class="lead text-muted mx-auto mb-5" style="max-width: 700px">
+      As a startup, building, testing, and refining your product can be a
+      daunting task. That's where Glitex Solutions comes in. We have the
+      expertise and experience to help you bring your product to life, and
+      ensure that it meets the needs and expectations of your customers.
+    </p>
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="image-wrapper">
+          <img
+            src="{% static 'img/startup-1.jpg' %}"
+            alt="Product Development"
+            class="img-fluid rounded-circle start-up-img"
+          />
+        </div>
+      </div>
+
+      <div class="col-md-6 text-start">
+        <div class="feature">
+          <h4 class="feature-title">Define</h4>
+          <p class="feature-description">
+            Our team of designers and developers will work with you to
+            understand your vision for your product, and help you bring it to
+            fruition through custom software development.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h4 class="feature-title">Build & Test</h4>
+          <p class="feature-description">
+            We'll help you build a robust, scalable, and user-friendly product
+            that meets your business goals. Once your product is built, we'll
+            work with you to test and refine it, ensuring that it meets the
+            highest quality standards.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h4 class="feature-title">Iterate & Support</h4>
+          <p class="feature-description">
+            Throughout the process, we'll be there to support you and offer
+            guidance, ensuring that your product is a success. With our help,
+            you'll be able to confidently bring your product to market, knowing
+            that it has been thoroughly tested and refined to meet the needs of
+            your customers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="tech-stack" class="text-center py-5">
+  <div class="container tech-stack-container">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title">Our Tech Stack</h2>
+    <div class="row justify-content-center text-center">
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/python-logo.png' %}"
+          alt="Python"
+          class="tech-icon"
+        />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/js-logo.png' %}"
+          alt="JavaScript"
+          class="tech-icon"
+        />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/django-logo.png' %}"
+          alt="Django"
+          class="tech-icon"
+        />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/react-logo.png' %}"
+          alt="React"
+          class="tech-icon"
+        />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/flutter-logo.png' %}"
+          alt="Flutter"
+          class="tech-icon"
+        />
+      </div>
+      <div class="col-4 col-sm-3 col-md-2 my-2">
+        <img
+          src="{% static 'img/react-native-logo.png' %}"
+          alt="React Native"
+          class="tech-icon"
+        />
       </div>
     </div>
   </div>
