@@ -322,3 +322,26 @@ body {
 .tech-icon:hover {
   opacity: 1;
 }
+
+/* Contact Page */
+
+.contact-section .section-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.contact-form {
+  max-width: 100%;
+}
+
+.contact-details {
+  color: #ffffff;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}

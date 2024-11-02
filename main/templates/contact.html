@@ -1,0 +1,114 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Contact Section -->
+<section class="contact-section py-5" data-aos="fade-up" data-aos-delay="400">
+  <div class="container">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title text-center">Contact Us</h2>
+    <p
+      class="lead text-muted text-center mx-auto mb-5"
+      style="max-width: 700px"
+    >
+      We'd love to hear from you! Get in touch with us via the form below, or
+      reach out using the contact details provided.
+    </p>
+
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-lg-6 mb-4">
+        <form class="contact-form bg-light p-4 rounded shadow">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Your Full Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="+254 700 000 000"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-secondary btn-lg w-100 rounded-pill"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Details & Map -->
+      <div class="col-lg-6">
+        <!-- Contact Details -->
+        <div
+          class="contact-details bg-primary text-white p-4 rounded shadow mb-4"
+        >
+          <h4>Our Contact Details</h4>
+          <p class="mb-2">
+            <strong>Address:</strong> 1234 Janja Street, Nairobi, Kenya
+          </p>
+          <p class="mb-2">
+            <strong>Phone:</strong>
+            <a href="tel:+254700000000" class="text-white">+254 700 000 000</a>
+          </p>
+          <p class="mb-2">
+            <strong>Email:</strong>
+            <a href="mailto:info@janjaprogrammers.com" class="text-white"
+              >info@janjaprogrammers.com</a
+            >
+          </p>
+          <p class="mb-0">
+            <strong>Working Hours:</strong> Mon - Fri, 9 AM - 5 PM
+          </p>
+        </div>
+
+        <!-- Map Embed (Optional) -->
+        <div
+          class="map-container shadow rounded"
+          data-aos="fade-left"
+          data-aos-delay="500"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.815439217278!2d36.82194601413803!3d-1.2920657590549286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10ac25a6231b%3A0x23a8d5d4a7bfebb8!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1679394450000!5m2!1sen!2s"
+            width="100%"
+            height="300"
+            style="border: 0; border-radius: 15px"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
