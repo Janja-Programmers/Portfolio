@@ -191,41 +191,94 @@ body {
 }
 
 /* What We Do Section */
-.card {
+.service-cards .card {
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.service-cards .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.card-title {
-  font-size: 1.2rem;
+.service-cards .card-body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.service-cards .card-title {
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-.card-text {
+.service-cards .card-text {
   font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.service-cards .btn-outline-primary {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.service-cards .btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-cards .card-title {
+    font-size: 1.15rem;
+  }
+
+  .service-cards .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .service-cards .card {
+    margin-bottom: 1rem;
+  }
+
+  .service-cards .card-title {
+    font-size: 1.1rem;
+  }
+
+  .service-cards .card-text {
+    font-size: 0.9rem;
+  }
 }
 
 /* Product Development */
 .image-wrapper {
-  position: relative;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .start-up-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
-  width: 80%;
-  max-width: 300px;
-  border: 5px solid var(--secondary-color);
+  max-width: 600px;
 }
 
 .feature {

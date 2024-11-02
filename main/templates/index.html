@@ -14,9 +14,15 @@
         </p>
         <a
           href="{% url 'services' %}"
-          class="btn btn-secondary btn-lg mt-3 rounded-pill"
-          >Learn More</a
+          class="btn btn-secondary btn-lg mt-3 rounded-pill me-3"
+          >Get Started</a
         >
+        <a
+          href="tel:+254794933942"
+          class="btn btn-outline-primary call-btn rounded-pill mt-3 py-2"
+        >
+          Call: +254 794 933 942
+        </a>
       </div>
 
       <!-- Right Side: Image Content -->
@@ -84,10 +90,10 @@
     </p>
 
     <!-- Service Cards -->
-    <div class="row">
+    <div class="row service-cards">
       <!-- Card 1: Business Development -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Business Development</h5>
             <p class="card-text">
@@ -101,8 +107,8 @@
       </div>
 
       <!-- Card 2: Mobile Applications -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Mobile Applications</h5>
             <p class="card-text">
@@ -116,8 +122,8 @@
       </div>
 
       <!-- Card 3: Management Information Systems -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Management Information Systems</h5>
             <p class="card-text">
@@ -130,8 +136,8 @@
       </div>
 
       <!-- Additional Cards -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">AI & ML Development</h5>
             <p class="card-text">
@@ -143,8 +149,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Low Code / No Code Development</h5>
             <p class="card-text">
@@ -156,8 +162,8 @@
         </div>
       </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card h-100">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Search Engine Optimization</h5>
             <p class="card-text">
@@ -185,12 +191,14 @@
     </p>
 
     <div class="row align-items-center">
-      <div class="col-md-6">
-        <div class="image-wrapper">
+      <div
+        class="col-md-6 d-flex justify-content-center align-items-center mb-5"
+      >
+        <div class="image-wrapper w-100 h-100">
           <img
             src="{% static 'img/startup-1.jpg' %}"
             alt="Product Development"
-            class="img-fluid rounded-circle start-up-img"
+            class="img-fluid start-up-img"
           />
         </div>
       </div>
