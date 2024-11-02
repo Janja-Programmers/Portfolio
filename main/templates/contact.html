@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 
 <!-- Contact Section -->
-<section class="contact-section py-5" data-aos="fade-up" data-aos-delay="400">
-  <div class="container">
+<section data-aos="fade-up" data-aos-delay="400">
+  <div class="container overflow-hidden">
     <!-- Section Heading and Description -->
     <h2 class="section-title text-center">Contact Us</h2>
     <p
@@ -13,10 +13,10 @@
       reach out using the contact details provided.
     </p>
 
-    <div class="row">
+    <div class="row gx-5">
       <!-- Contact Form -->
-      <div class="col-lg-6 mb-4">
-        <form class="contact-form bg-light p-4 rounded shadow">
+      <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="500">
+        <form class="bg-light p-4 rounded shadow">
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
             <input
@@ -66,44 +66,51 @@
         </form>
       </div>
 
-      <!-- Contact Details & Map -->
+      <!-- Contact Details & Map Section -->
       <div class="col-lg-6">
-        <!-- Contact Details -->
+        <!-- Contact Details Card -->
         <div
-          class="contact-details bg-primary text-white p-4 rounded shadow mb-4"
+          class="col-12 mb-4 service-cards"
+          data-aos="fade-left"
+          data-aos-delay="600"
         >
-          <h4>Our Contact Details</h4>
-          <p class="mb-2">
-            <strong>Address:</strong> 1234 Janja Street, Nairobi, Kenya
-          </p>
-          <p class="mb-2">
-            <strong>Phone:</strong>
-            <a href="tel:+254700000000" class="text-white">+254 700 000 000</a>
-          </p>
-          <p class="mb-2">
-            <strong>Email:</strong>
-            <a href="mailto:info@janjaprogrammers.com" class="text-white"
-              >info@janjaprogrammers.com</a
-            >
-          </p>
-          <p class="mb-0">
-            <strong>Working Hours:</strong> Mon - Fri, 9 AM - 5 PM
-          </p>
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Contact Details</h5>
+              <p class="card-text mb-2">
+                <i class="fas fa-map-marker-alt"></i> Mombasa, Kenya
+              </p>
+              <p class="card-text mb-2">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254700000000"> +254 794 933 942</a>
+              </p>
+              <p class="card-text mb-2">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:support@janjaprogrammers.com">
+                  support@janjaprogrammers.com</a
+                >
+              </p>
+              <p class="card-text mb-0">
+                <strong>Working Hours:</strong> Mon - Fri, 9AM - 5PM
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Map Embed (Optional) -->
+        <!-- Map Embed -->
         <div
           class="map-container shadow rounded"
           data-aos="fade-left"
-          data-aos-delay="500"
+          data-aos-delay="700"
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.815439217278!2d36.82194601413803!3d-1.2920657590549286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10ac25a6231b%3A0x23a8d5d4a7bfebb8!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2s!4v1679394450000!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31839.465880186443!2d39.62660729885102!3d-4.03404732238998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012bab94dd2f9%3A0x3fb0d5e8bbc88dc3!2sTudor%2C%20Mombasa!5e0!3m2!1sen!2ske!4v1730586650135!5m2!1sen!2ske"
             width="100%"
-            height="300"
+            height="270"
             style="border: 0; border-radius: 15px"
             allowfullscreen=""
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
