@@ -1,3 +1,265 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<h2>Enroll</h2>
+<!-- Hero Section -->
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">Learn Django</h1>
+    <p class="lead text-muted mt-3">
+      Join our backend development course and gain hands-on experience with
+      real-world projects.
+    </p>
+    <a
+      href="#"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-bs-toggle="modal"
+      data-bs-target="#enrollModal"
+      >Enroll Now</a
+    >
+  </div>
+</section>
+
+<!-- Course Details Section -->
+<section class="course-details py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Course Details</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <i class="fas fa-calendar-alt fs-1 mb-3"></i>
+            <h5 class="card-title mt-3 fw-bold">Start Date</h5>
+            <p class="card-text">06 Jan 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <i class="fas fa-calendar-check fs-1 mb-3"></i>
+            <h5 class="card-title mt-3 fw-bold">End Date</h5>
+            <p class="card-text">28 Mar 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <i class="fas fa-chalkboard-teacher fs-1 mb-3"></i>
+            <h5 class="card-title mt-3 fw-bold">Format</h5>
+            <p class="card-text">Online Workshop</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row">
+    <!-- Course Requirements Section -->
+    <section
+      class="col-md-6 col-lg-6 py-5"
+      data-aos="fade-right"
+      data-aos-delay="400"
+    >
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="section-title mb-3">Course Requirements</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="500"
+              >
+                <i class="fas fa-wallet fs-3 me-3"></i> Course Registration Fee
+                of KES 5,000
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="600"
+              >
+                <i class="fas fa-laptop fs-3 me-3"></i> A laptop in good working
+                condition
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="700"
+              >
+                <i class="fas fa-wifi fs-3 me-3"></i> Reliable internet
+                connection
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="800"
+              >
+                <i class="fas fa-code fs-3 me-3"></i> Basic knowledge of at
+                least one programming language
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="900"
+              >
+                <i class="fas fa-clock fs-3 me-3"></i> Availability for 2 hours
+                in the evenings during weekdays
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Learn Section -->
+    <section
+      class="col-md-6 col-lg-6 py-5"
+      data-aos="fade-right"
+      data-aos-delay="400"
+    >
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <h2 class="section-title mb-3">Why Enroll in This Course?</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="500"
+              >
+                <i class="fas fa-chalkboard-teacher fs-3 me-3"></i> Expert-led
+                live sessions
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="600"
+              >
+                <i class="fas fa-laptop-code fs-3 me-3"></i> Hands-on projects
+                and assignments
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="700"
+              >
+                <i class="fas fa-video fs-3 me-3"></i> Access to a comprehensive
+                LMS with notes and recorded class videos
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="800"
+              >
+                <i class="fas fa-users fs-3 me-3"></i> Opportunities for peer
+                collaboration and networking
+              </span>
+            </li>
+            <li class="list-group-item">
+              <span
+                class="lead text-muted"
+                data-aos="fade-right"
+                data-aos-delay="900"
+              >
+                <i class="fas fa-certificate fs-3 me-3"></i> Certificate of
+                completion
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="text-center" data-aos="fade-up" data-aos-delay="1000">
+    <a
+      href="#"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill w-100"
+      data-bs-toggle="modal"
+      data-bs-target="#enrollModal"
+      >Enroll Now</a
+    >
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="enrollModal"
+  tabindex="-1"
+  aria-labelledby="enrollModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="enrollModalLabel">
+          Enroll in the Django Course
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="studentName" class="form-label">Student Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="studentName"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="mpesaPhone" class="form-label"
+              >M-Pesa Phone Number</label
+            >
+            <input
+              type="tel"
+              class="form-control"
+              id="mpesaPhone"
+              placeholder="Enter your M-Pesa phone number"
+              required
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Pay Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
