@@ -1,0 +1,121 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<!-- Contact Section -->
+<section data-aos="fade-up" data-aos-delay="400">
+  <div class="container overflow-hidden">
+    <!-- Section Heading and Description -->
+    <h2 class="section-title text-center">Contact Us</h2>
+    <p
+      class="lead text-muted text-center mx-auto mb-5"
+      style="max-width: 700px"
+    >
+      We'd love to hear from you! Get in touch with us via the form below, or
+      reach out using the contact details provided.
+    </p>
+
+    <div class="row gx-5">
+      <!-- Contact Form -->
+      <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="500">
+        <form class="bg-light p-4 rounded shadow">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Your Full Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              placeholder="+254 700 000 000"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-secondary btn-lg w-100 rounded-pill"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Details & Map Section -->
+      <div class="col-lg-6">
+        <!-- Contact Details Card -->
+        <div
+          class="col-12 mb-4 service-cards"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        >
+          <div class="card h-100 shadow">
+            <div class="card-body">
+              <h5 class="card-title">Contact Details</h5>
+              <p class="card-text mb-2">
+                <i class="fas fa-map-marker-alt"></i> Mombasa, Kenya
+              </p>
+              <p class="card-text mb-2">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254700000000"> +254 794 933 942</a>
+              </p>
+              <p class="card-text mb-2">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:support@janjaprogrammers.com">
+                  support@janjaprogrammers.com</a
+                >
+              </p>
+              <p class="card-text mb-0">
+                <strong>Working Hours:</strong> Mon - Fri, 9AM - 5PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Embed -->
+        <div
+          class="map-container shadow rounded"
+          data-aos="fade-left"
+          data-aos-delay="700"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31839.465880186443!2d39.62660729885102!3d-4.03404732238998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012bab94dd2f9%3A0x3fb0d5e8bbc88dc3!2sTudor%2C%20Mombasa!5e0!3m2!1sen!2ske!4v1730586650135!5m2!1sen!2ske"
+            width="100%"
+            height="270"
+            style="border: 0; border-radius: 15px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
