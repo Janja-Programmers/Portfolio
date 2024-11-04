@@ -1,5 +1,11 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{%extends "base.html"%} {%load static%} {%load bootstrap5%} {%block content%}
 <!-- Hero Section -->
+<!-- Display Error Message -->
+{% if error_message %}
+<div class="alert alert-danger text-center" role="alert">
+  {{ error_message }}
+</div>
+{% endif %}
 <section
   class="hero-section text-center text-white bg-light py-5"
   data-aos="fade-right"
@@ -211,9 +217,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="enrollModalLabel">
-          Enroll in the Django Course
-        </h5>
+        <h5 class="modal-title" id="enrollModalLabel">Pay with Mpesa</h5>
         <button
           type="button"
           class="btn-close"
@@ -222,40 +226,11 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="studentName" class="form-label">Student Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="studentName"
-              placeholder="Enter your name"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="mpesaPhone" class="form-label"
-              >M-Pesa Phone Number</label
-            >
-            <input
-              type="tel"
-              class="form-control"
-              id="mpesaPhone"
-              placeholder="Enter your M-Pesa phone number"
-              required
-            />
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Pay Now</button>
+        <form method="POST" class="needs-validation" action="" novalidate>
+          {% csrf_token %} {% for field in form %}
+          <div class="mb-3">{% bootstrap_field field %}</div>
+          {% endfor %}
+          <button type="submit" class="btn btn-success w-100">Pay</button>
         </form>
       </div>
     </div>
