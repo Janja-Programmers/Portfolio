@@ -1,5 +1,6 @@
 import os, re, base64, json, requests
 from django.core.mail import send_mail
+from django.contrib import messages
 from django.conf import settings
 from datetime import datetime
 from django.shortcuts import render, redirect
@@ -230,4 +231,24 @@ def home(request):
     return render(request, 'index.html')
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        # Construct the message
+        full_message = f"Name: {name}\nEmail: {email}\nPhone: {phone}\n\nMessage:\n{message}"
+
+        # Send email
+        send_mail(
+            subject=f"New Contact Form Submission from {name}",
+            message=full_message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[settings.EMAIL_HOST_USER],
+            fail_silently=False,
+        )
+        messages.success(request, "Thank you for contacting us! We will get back to you soon.")
+        return render(request, 'contact.html')
+    
     return render(request, 'contact.html')

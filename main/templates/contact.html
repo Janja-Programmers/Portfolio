@@ -14,15 +14,31 @@
     </p>
 
     <div class="row gx-5">
+      {% if messages %}
+      <div class="mt-3">
+        {% for message in messages %}
+        <div class="alert alert-success text-center" role="alert">
+          {{ message }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
       <!-- Contact Form -->
       <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-delay="500">
-        <form class="bg-light p-4 rounded shadow">
+        <form
+          method="post"
+          action="{% url 'contact' %}"
+          class="bg-light p-4 rounded shadow"
+          onsubmit="handleFormSubmit(event)"
+        >
+          {% csrf_token %}
           <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
             <input
               type="text"
               class="form-control"
               id="name"
+              name="name"
               placeholder="Your Full Name"
               required
             />
@@ -33,6 +49,7 @@
               type="email"
               class="form-control"
               id="email"
+              name="email"
               placeholder="name@example.com"
               required
             />
@@ -43,6 +60,7 @@
               type="tel"
               class="form-control"
               id="phone"
+              name="phone"
               placeholder="+254 700 000 000"
               required
             />
@@ -52,6 +70,7 @@
             <textarea
               class="form-control"
               id="message"
+              name="message"
               rows="4"
               placeholder="Write your message here..."
               required
@@ -60,8 +79,16 @@
           <button
             type="submit"
             class="btn btn-secondary btn-lg w-100 rounded-pill"
+            id="submitButton"
           >
-            Send Message
+            <span
+              id="spinner"
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+              style="display: none"
+            ></span>
+            <span id="buttonText">Send Message</span>
           </button>
         </form>
       </div>
@@ -117,5 +144,21 @@
     </div>
   </div>
 </section>
+<script>
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const submitButton = document.getElementById("submitButton");
+    const buttonText = document.getElementById("buttonText");
+    const spinner = document.getElementById("spinner");
+
+    buttonText.textContent = "Sending...";
+    spinner.style.display = "inline-block";
+    submitButton.disabled = true;
+
+    // Submit the form
+    event.target.submit();
+  }
+</script>
 
 {% endblock %}
