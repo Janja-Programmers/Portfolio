@@ -99,10 +99,9 @@ def learn(request):
                 phone_number = format_phone_number(form.cleaned_data["phone_number"])
 
                 response = initiate_stk_push(phone_number)
-                print("STK Push Response:", response)  # Log response
 
                 if response.get("ResponseCode") == "0":
-                    print("STK push successful, preparing to render payment.html")
+                    print("STK Push Sent")
                     checkout_request_id = response["CheckoutRequestID"]
                     transaction = Transaction(
                         name=name,
@@ -114,21 +113,18 @@ def learn(request):
                     transaction.save()
                     return render(request, "payment.html", {"checkout_request_id": checkout_request_id})
                 else:
-                    print("STK Push Failed")  # Log failure
+                    print("STK Push Failed")
                     error_message = response.get("errorMessage", "Failed to send STK push. Please try again.")
                     return render(request, "learn.html", {"form": form, "error_message": error_message})
             except ValueError as e:
-                print("ValueError encountered:", e)
                 return render(request, "learn.html", {"form": form, "error_message": str(e)})
             except Exception as e:
-                print("Unexpected error:", e)
                 return render(request, "learn.html", {"form": form, "error_message": f"An unexpected error occurred: {str(e)}"})
         else:
             error_message = "There was an error with your submission. Please check the form fields."
             return render(request, "learn.html", {"form": form, "error_message": error_message})
     else:
         form = PaymentForm()
-    print("Rendering learn.html for GET request")
     return render(request, "learn.html", {"form": form})
 
 # Query STK Push status
@@ -166,7 +162,6 @@ def stk_status_view(request):
         try:
             data = json.loads(request.body)
             checkout_request_id = data.get('checkout_request_id')
-            print("CheckoutRequestID:", checkout_request_id)
 
             status = query_stk_push(checkout_request_id)
             return JsonResponse({"status": status})
