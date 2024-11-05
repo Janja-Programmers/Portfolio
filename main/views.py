@@ -1,4 +1,6 @@
 import os, re, base64, json, requests
+from django.core.mail import send_mail
+from django.conf import settings
 from datetime import datetime
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
@@ -170,7 +172,7 @@ def stk_status_view(request):
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
 
-@csrf_exempt  
+@csrf_exempt
 def payment_callback(request):
     if request.method != "POST":
         return HttpResponseBadRequest("Only POST requests are allowed")
@@ -179,24 +181,38 @@ def payment_callback(request):
         callback_data = json.loads(request.body)
         result_code = callback_data["Body"]["stkCallback"]["ResultCode"]
         checkout_id = callback_data["Body"]["stkCallback"]["CheckoutRequestID"]
-
-     
+        
         try:
             transaction = Transaction.objects.get(checkout_id=checkout_id)
 
             if result_code == 0:
-             
                 metadata = callback_data["Body"]["stkCallback"]["CallbackMetadata"]["Item"]
                 mpesa_code = next(item["Value"] for item in metadata if item["Name"] == "MpesaReceiptNumber")
                 phone = next(item["Value"] for item in metadata if item["Name"] == "PhoneNumber")
 
-              
+                # Update transaction details
                 transaction.mpesa_code = mpesa_code
                 transaction.phone_number = phone
                 transaction.status = "Success"
                 transaction.save()
 
-                return JsonResponse({"ResultCode": 0, "ResultDesc": "Payment successful"})
+                # Send confirmation email to the user
+                subject = "Payment Confirmation"
+                message = f"Hello {transaction.name},\n\nThank you for your payment! Your transaction was successful.\n\n" \
+                          f"Transaction ID: {mpesa_code}\n" \
+                          f"Phone Number: {phone}\n\n" \
+                          "You will be added to our course WhatsApp group, where we’ll share important updates and resources. " \
+                          "If you have any questions, feel free to reach out to our support team.\n\n" \
+                          "Best regards,\nJanja Programmers Admin\nsupport@janjaprogrammers.com\n+254 794 933 942"
+                send_mail(
+                    subject,
+                    message,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [transaction.email],
+                    fail_silently=False,
+                )
+
+                return JsonResponse({"ResultCode": 0, "ResultDesc": "Payment successful and email sent"})
 
             else:
                 transaction.status = "Failed"
