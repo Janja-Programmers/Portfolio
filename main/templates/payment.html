@@ -1,7 +1,9 @@
 {%extends "base.html"%} {%load static%} {%load bootstrap5%} {%block content%}
-
-<div class="d-flex justify-content-center align-items-center my-5 py-5">
-  <div class="card shadow-sm p-5" style="max-width: 500px; width: 100%">
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="min-height: 59vh"
+>
+  <div class="card shadow-sm p-5" style="max-width: 600px; width: 100%">
     {% if error_message %}
     <div class="alert alert-danger text-center" role="alert">
       {{ error_message }}

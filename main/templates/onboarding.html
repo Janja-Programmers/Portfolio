@@ -1,0 +1,369 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<section
+  class="onboarding-section"
+  data-aos="fade-up"
+  data-aos-delay="400"
+  style="min-height: 59vh; display: flex; align-items: center"
+>
+  <div class="container">
+    <!-- Centered Form -->
+    <div class="d-flex justify-content-center align-items-center">
+      <!-- Form Card -->
+      <div
+        class="bg-light p-4 rounded shadow"
+        style="width: 100%; max-width: 900px"
+      >
+        <!-- Progress Bar -->
+        <div class="progress mb-4" style="height: 8px">
+          <div
+            class="progress-bar bg-primary"
+            role="progressbar"
+            id="progressBar"
+            style="width: 20%"
+          ></div>
+        </div>
+
+        <!-- Form -->
+        <form
+          id="onboardingForm"
+          method="post"
+          action="{% url 'onboarding' %}"
+          onsubmit="handleFormSubmit(event)"
+        >
+          {% csrf_token %}
+
+          <!-- Step 1: Business/Organization Category -->
+          <div class="onboarding-step" id="step1">
+            <h4>
+              What's your business/org/institution category?<span
+                class="text-danger"
+                >*</span
+              >
+            </h4>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="category"
+                  id="startup"
+                  value="Startup"
+                  required
+                />
+                <label class="form-check-label fs-5" for="startup">
+                  Startup (New Idea)
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="category"
+                  id="existing"
+                  value="Existing Business"
+                  required
+                />
+                <label class="form-check-label fs-5" for="existing">
+                  Existing Business
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="category"
+                  id="government"
+                  value="Government"
+                  required
+                />
+                <label class="form-check-label fs-5" for="government">
+                  Government
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="category"
+                  id="ngo"
+                  value="NGO"
+                  required
+                />
+                <label class="form-check-label fs-5" for="ngo">NGO</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="category"
+                  id="other"
+                  value="Other"
+                  required
+                />
+                <label class="form-check-label fs-5" for="other">Other</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Service Requirement -->
+          <div class="onboarding-step d-none" id="step2">
+            <h4>
+              What service are you looking for?<span class="text-danger"
+                >*</span
+              >
+            </h4>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="software"
+                  value="Software Development"
+                  required
+                />
+                <label class="form-check-label fs-5" for="software">
+                  Software Development
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="web"
+                  value="Web Development"
+                  required
+                />
+                <label class="form-check-label fs-5" for="web">
+                  Web Development
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="mobile"
+                  value="Mobile App Development"
+                  required
+                />
+                <label class="form-check-label fs-5" for="mobile">
+                  Mobile App Development
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="consultancy"
+                  value="IT Consultancy"
+                  required
+                />
+                <label class="form-check-label fs-5" for="consultancy">
+                  IT Consultancy
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="seo"
+                  value="SEO"
+                  required
+                />
+                <label class="form-check-label fs-5" for="seo">SEO</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="service"
+                  id="service_other"
+                  value="Other"
+                  required
+                />
+                <label class="form-check-label fs-5" for="service_other">
+                  Other
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Service Description -->
+          <div class="onboarding-step d-none" id="step3">
+            <h4>
+              Briefly describe the service you are looking for.<span
+                class="text-danger"
+                >*</span
+              >
+            </h4>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="service_description"
+                name="service_description"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Step 4: Email Address -->
+          <div class="onboarding-step d-none" id="step4">
+            <h4>
+              Please provide your email address.<span class="text-danger"
+                >*</span
+              >
+            </h4>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Step 5: Phone Number -->
+          <div class="onboarding-step d-none" id="step5">
+            <h4>
+              Please provide your phone number<span class="text-danger">*</span>
+            </h4>
+            <div class="form-group">
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                name="phone"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="mt-4">
+            <div class="row">
+              <!-- Back Button -->
+              <div class="col-4 mb-2">
+                <button
+                  type="button"
+                  class="btn btn-outline-primary w-100"
+                  id="backButton"
+                  onclick="goBack()"
+                  style="display: none"
+                >
+                  Back
+                </button>
+              </div>
+
+              <!-- Next Button -->
+              <div class="col-8 mb-2 mb-sm-0">
+                <button
+                  type="button"
+                  class="btn btn-secondary w-100"
+                  id="nextButton"
+                  onclick="goNext()"
+                >
+                  Next
+                </button>
+              </div>
+
+              <!-- Submit Button (Hidden by default) -->
+              <div class="col-12 mb-2 mb-sm-0">
+                <button
+                  type="submit"
+                  class="btn btn-secondary w-100 d-none"
+                  id="submitButton"
+                >
+                  <span
+                    id="spinner"
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                    style="display: none"
+                  ></span>
+                  <span id="buttonText">Submit</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  let currentStep = 1;
+
+  function updateProgressBar(step) {
+    const progress = step * 20;
+    document.getElementById("progressBar").style.width = progress + "%";
+  }
+
+  function showStep(step) {
+    document.querySelectorAll(".onboarding-step").forEach((el, index) => {
+      el.classList.toggle("d-none", index + 1 !== step);
+    });
+    document.getElementById("backButton").style.display =
+      step === 1 ? "none" : "inline-block";
+    document
+      .getElementById("nextButton")
+      .classList.toggle("d-none", step === 5);
+    document
+      .getElementById("submitButton")
+      .classList.toggle("d-none", step !== 5);
+    updateProgressBar(step);
+  }
+
+  function goNext() {
+    const currentStepElement = document.getElementById(`step${currentStep}`);
+    const requiredInputs = currentStepElement.querySelectorAll("[required]");
+    let allFilled = true;
+    requiredInputs.forEach((input) => {
+      if (!input.checkValidity()) {
+        allFilled = false;
+        input.classList.add("is-invalid");
+      } else {
+        input.classList.remove("is-invalid");
+      }
+    });
+    if (allFilled && currentStep < 5) {
+      currentStep++;
+      showStep(currentStep);
+    }
+  }
+
+  function goBack() {
+    if (currentStep > 1) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+
+    document.getElementById("backButton").disabled = true;
+    const submitButton = document.getElementById("submitButton");
+    const buttonText = document.getElementById("buttonText");
+    const spinner = document.getElementById("spinner");
+
+    buttonText.textContent = "Submiting...";
+    spinner.style.display = "inline-block";
+    submitButton.disabled = true;
+
+    // Submit the form
+    event.target.submit();
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    showStep(currentStep);
+  });
+</script>
+{% endblock %}
