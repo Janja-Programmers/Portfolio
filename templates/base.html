@@ -4,6 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Best Software Company" />
+    <meta name="keywords" content="Software" />
     <title>Janja Programmers - Software Development Company</title>
 
     <!-- Font Awesome Link -->
@@ -45,6 +47,10 @@
       type="image/png"
       sizes="16x16"
       href="{% static 'img/favicon-16x16.png' %}"
+    />
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
     />
     <link rel="manifest" href="{% static 'img/site.webmanifest' %}" />
   </head>
@@ -97,9 +103,14 @@
               >
                 Call: +254 794 933 942
               </a>
-              <a href="#" class="btn btn-primary appointment-btn rounded-pill">
-                Book Appointment
-              </a>
+              <!-- Calendly link widget begin -->
+              <a
+                href=""
+                class="btn btn-primary appointment-btn rounded-pill"
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/janjaprogrammers/appointment?hide_gdpr_banner=1&text_color=006039&primary_color=a37e2c'});return false;"
+                >Book Appointment</a
+              >
+              <!-- Calendly link widget end -->
             </div>
           </div>
         </div>
@@ -193,5 +204,10 @@
         new Date().getFullYear();
       AOS.init();
     </script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
   </body>
 </html>

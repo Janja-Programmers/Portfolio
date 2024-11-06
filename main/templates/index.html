@@ -1,4 +1,10 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %} {% load static %} {% block content %} {%if messages%}
+<div class="mt-3">
+  {% for message in messages %}
+  <div class="alert alert-success text-center" role="alert">{{ message }}</div>
+  {% endfor %}
+</div>
+{% endif %}
 <!-- Hero Section -->
 <section
   class="hero-section d-flex align-items-center"
@@ -16,7 +22,9 @@
           We bring creativity and technology together to drive your business
           forward. Let’s build a smarter future, together.
         </p>
-        <a href="#" class="btn btn-secondary btn-lg mt-3 rounded-pill me-3"
+        <a
+          href="{% url 'onboarding' %}"
+          class="btn btn-secondary btn-lg mt-3 rounded-pill me-3"
           >Get Started</a
         >
         <a

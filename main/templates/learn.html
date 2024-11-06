@@ -226,15 +226,49 @@
         ></button>
       </div>
       <div class="modal-body">
-        <form method="POST" class="needs-validation" action="" novalidate>
+        <form
+          method="POST"
+          class="needs-validation"
+          action=""
+          novalidate
+          onsubmit="handleFormSubmit(event)"
+        >
           {% csrf_token %} {% for field in form %}
           <div class="mb-3">{% bootstrap_field field %}</div>
           {% endfor %}
-          <button type="submit" class="btn btn-success w-100">Pay</button>
+          <button
+            type="submit"
+            class="btn btn-secondary btn-lg w-100 rounded-pill"
+            id="submitButton"
+          >
+            <span
+              id="spinner"
+              class="spinner-border spinner-border-sm"
+              role="status"
+              aria-hidden="true"
+              style="display: none"
+            ></span>
+            <span id="buttonText">Pay</span>
+          </button>
         </form>
       </div>
     </div>
   </div>
 </div>
+<script>
+  function handleFormSubmit(event) {
+    event.preventDefault();
 
+    const submitButton = document.getElementById("submitButton");
+    const buttonText = document.getElementById("buttonText");
+    const spinner = document.getElementById("spinner");
+
+    buttonText.textContent = "Processing...";
+    spinner.style.display = "inline-block";
+    submitButton.disabled = true;
+
+    // Submit the form
+    event.target.submit();
+  }
+</script>
 {% endblock %}
