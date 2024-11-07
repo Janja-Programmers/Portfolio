@@ -1,0 +1,139 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- Hero Section -->
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-5 fw-bold">Management Information Systems</h1>
+    <p class="lead text-muted mt-3">
+      Strengthen your business with tailored management information systems,
+      including ERP, healthcare, and educational solutions, designed to boost
+      operational efficiency.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">
+          Our Expertise in Management Systems
+        </h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          We specialize in delivering efficient, user-friendly management
+          information systems that streamline workflows, increase productivity,
+          and provide actionable insights for informed decision-making. Our
+          custom solutions include ERP systems, healthcare management, and
+          educational administration platforms tailored for SMEs and
+          micro-businesses.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          With a focus on security, scalability, and adaptability, our systems
+          ensure that your organization can grow and evolve smoothly with
+          technology.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/mis-1.jpg' %}"
+          alt="Management Information Systems"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-chart-line"></i></h3>
+            <h4>Real-Time Data Insights</h4>
+            <p>
+              Access real-time data insights to drive informed decision-making
+              and monitor business performance effortlessly.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-user-shield"></i></h3>
+            <h4>Enhanced Security</h4>
+            <p>
+              Our systems are built with advanced security protocols to protect
+              sensitive data, ensuring peace of mind and compliance with
+              industry standards.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-tools"></i></h3>
+            <h4>Customizable Solutions</h4>
+            <p>
+              Tailor your management system to suit specific business
+              requirements, with flexible and scalable features that grow with
+              your organization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">
+      Ready to take your business operations to the next level?
+    </h2>
+    <p class="lead text-muted mt-3">
+      Our team can build a system tailored to your needs for seamless efficiency
+      and growth.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}

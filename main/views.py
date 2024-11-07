@@ -290,3 +290,21 @@ def contact(request):
         return render(request, 'contact.html')
     
     return render(request, 'contact.html')
+
+def web_development_detail(request):
+    return render(request, 'services/web_development_detail.html')
+
+def mobile_app_development_detail(request):
+    return render(request, 'services/mobile_app_development_detail.html')
+
+def management_information_systems_detail(request):
+    return render(request, 'services/management_information_systems_detail.html')
+
+def ai_ml_development_detail(request):
+    return render(request, 'services/ai_ml_development_detail.html')
+
+def it_consultancy_detail(request):
+    return render(request, 'services/it_consultancy_detail.html')
+
+def search_engine_optimization_detail(request):
+    return render(request, 'services/search_engine_optimization_detail.html')

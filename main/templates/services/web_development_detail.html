@@ -1,0 +1,134 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">Web Development</h1>
+    <p class="lead text-muted mt-3">
+      Transform your online presence with a comprehensive approach to both web
+      design and development, including powerful web applications and backend
+      integration.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">What We Offer</h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          We offer full-stack web development services, from creating stunning
+          and responsive designs to building scalable web applications. Our team
+          works with you to bring your ideas to life with an integrated approach
+          that includes both frontend and backend development. Whether you need
+          a simple website, a complex web application, or custom backend
+          solutions, we’re here to help your business succeed online.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          Our solutions are built to be user-friendly, secure, and scalable,
+          ensuring your website or web app grows with your business needs.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/webdev-1.png' %}"
+          alt="Web Development"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-laptop-code"></i></h3>
+            <h4>Responsive Design</h4>
+            <p>
+              We create responsive, modern websites that adapt seamlessly to any
+              device, ensuring an excellent user experience across all
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-cogs"></i></h3>
+            <h4>Full-Stack Development</h4>
+            <p>
+              From frontend design to backend solutions, we specialize in
+              creating robust web applications with dynamic functionalities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-cloud"></i></h3>
+            <h4>Backend Integration</h4>
+            <p>
+              We build powerful, secure backend systems that integrate
+              seamlessly with your website, enabling features like user
+              management, databases, and more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">
+      Ready to Build Your Dream Website?
+    </h2>
+    <p class="lead text-muted mt-3">
+      Our team is ready to help you build the perfect website or web application
+      to elevate your business.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}
