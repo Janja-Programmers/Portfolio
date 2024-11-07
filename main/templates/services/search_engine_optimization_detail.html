@@ -1,0 +1,129 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-5 fw-bold">Search Engine Optimization (SEO)</h1>
+    <p class="lead text-muted mt-3">
+      Increase your visibility and reach more customers with customized SEO
+      strategies designed to drive traffic and maximize your online presence.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">Our SEO Services</h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          Our SEO services are crafted to improve your search engine rankings
+          and ensure your website reaches the right audience. We combine
+          industry insights with data-driven techniques to boost visibility,
+          attract more organic traffic, and convert visits into leads.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          Our approach includes on-page optimization, content strategy, link
+          building, and technical SEO to make sure your website is fully
+          optimized and performing at its best.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/seo-1.jpg' %}"
+          alt="Search Engine Optimization"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-chart-line"></i></h3>
+            <h4>Increased Visibility</h4>
+            <p>
+              Boost your brand’s visibility on search engines, reaching more
+              potential customers where they are searching.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-traffic-light"></i></h3>
+            <h4>Organic Traffic Growth</h4>
+            <p>
+              Increase high-quality, organic traffic to your site through
+              targeted SEO practices that drive real engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-bullseye"></i></h3>
+            <h4>Targeted Audience Reach</h4>
+            <p>
+              We target your specific audience to ensure your message reaches
+              the right people and converts visits into leads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">
+      Ready to Increase Your Online Visibility?
+    </h2>
+    <p class="lead text-muted mt-3">
+      Our team is ready to help your business grow with proven SEO strategies.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}

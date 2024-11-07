@@ -83,16 +83,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" href="{% url 'home' %}">
+                  <i class="fas fa-home"></i> Home
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="{% url 'learn' %}">
+                  <i class="fas fa-book"></i> Learn
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'learn' %}">Learn</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                <a class="nav-link" href="{% url 'contact' %}">
+                  <i class="fas fa-envelope"></i> Contact
+                </a>
               </li>
             </ul>
             <!-- Call and Appointment Buttons -->

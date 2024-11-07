@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<!-- Hero Section -->
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">AI & ML Development</h1>
+    <p class="lead text-muted mt-3">
+      Leverage cutting-edge artificial intelligence and machine learning
+      solutions to drive automation, insights, and innovation in your business.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">What We Offer</h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          Our AI and machine learning solutions are designed to unlock new
+          possibilities for your business. From predictive analytics and natural
+          language processing to intelligent automation, we provide customized
+          AI solutions that align with your strategic goals.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          With our team’s expertise, we transform data into actionable insights,
+          helping you make smarter decisions and drive sustainable growth.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/ai-ml-1.png' %}"
+          alt="AI & ML Development"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-chart-line"></i></h3>
+            <h4>Predictive Analytics</h4>
+            <p>
+              Utilize data-driven insights to forecast trends, optimize
+              operations, and make proactive business decisions that set you
+              ahead of the competition.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-robot"></i></h3>
+            <h4>Intelligent Automation</h4>
+            <p>
+              Streamline processes with AI-powered automation, reducing
+              repetitive tasks and enabling your team to focus on strategic
+              priorities.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-brain"></i></h3>
+            <h4>Natural Language Processing</h4>
+            <p>
+              Enhance customer engagement and streamline interactions with
+              AI-driven language processing, enabling smarter, responsive
+              systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">Ready to Transform with AI?</h2>
+    <p class="lead text-muted mt-3">
+      Let us help you harness the power of artificial intelligence and machine
+      learning to drive your business forward.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}

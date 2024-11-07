@@ -199,32 +199,29 @@ def payment_callback(request):
 
                 # Send confirmation email to the user
                 subject = "Payment Confirmation"
-                message = f"Hello {transaction.name},\n\nThank you for your payment! Your transaction was successful.\n\n" \
-                          f"Transaction ID: {mpesa_code}\n" \
-                          f"Phone Number: {phone}\n\n" \
-                          "You will be added to our course WhatsApp group, where we’ll share important updates and resources. " \
-                          "If you have any questions, feel free to reach out to our support team.\n\n" \
-                          "Best regards,\nJanja Programmers Admin\nsupport@janjaprogrammers.com\n+254 794 933 942"
-                try:
-                    result = send_mail(
-                        subject,
-                        message,
-                        settings.DEFAULT_FROM_EMAIL,
-                        [transaction.email],
-                        fail_silently=False,
-                    )
-                    if result == 1:
-                        print("Email sent successfully.")
-                    else:
-                        print(f"Failed to send email.Result: {result}.")
-                except BadHeaderError:
-                    print("Invalid header found.")
-                except SMTPException as e:
-                    print(f"An error occurred while sending the email: {e}")
-                except Exception as e:
-                    print(f"An unexpected error occurred: {e}")
-                return JsonResponse({"ResultCode": 0, "ResultDesc": "Payment successful"})
+                message = f"""Hello {transaction.name},
 
+                Thank you for your payment! Your transaction was successful.
+
+                Transaction ID: {mpesa_code}
+                Phone Number: {phone}
+
+                You will be added to our course WhatsApp group, where we’ll share important updates and resources. 
+                If you have any questions, feel free to reach out to our support team.
+
+                Best regards,
+                Janja Programmers Admin
+                support@janjaprogrammers.com
+                +254 794 933 942
+                """
+                send_mail(
+                    subject,
+                    message,
+                    settings.DEFAULT_FROM_EMAIL,
+                    [transaction.email],
+                    fail_silently=False,
+                )
+                return JsonResponse({"ResultCode": 0, "ResultDesc": "Payment successful"})
             else:
                 transaction.status = "Failed"
                 transaction.save()
@@ -293,3 +290,21 @@ def contact(request):
         return render(request, 'contact.html')
     
     return render(request, 'contact.html')
+
+def web_development_detail(request):
+    return render(request, 'services/web_development_detail.html')
+
+def mobile_app_development_detail(request):
+    return render(request, 'services/mobile_app_development_detail.html')
+
+def management_information_systems_detail(request):
+    return render(request, 'services/management_information_systems_detail.html')
+
+def ai_ml_development_detail(request):
+    return render(request, 'services/ai_ml_development_detail.html')
+
+def it_consultancy_detail(request):
+    return render(request, 'services/it_consultancy_detail.html')
+
+def search_engine_optimization_detail(request):
+    return render(request, 'services/search_engine_optimization_detail.html')

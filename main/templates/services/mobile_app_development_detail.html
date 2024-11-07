@@ -1,0 +1,131 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Hero Section -->
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">Mobile App Development</h1>
+    <p class="lead text-muted mt-3">
+      Elevate your business with our customized mobile app solutions designed
+      for user engagement and high performance on Android and iOS platforms.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">Our Mobile App Solutions</h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          Our team specializes in crafting tailored mobile applications that
+          drive engagement, streamline processes, and offer seamless user
+          experiences on Android and iOS. From native to cross-platform apps, we
+          cover the full lifecycle of app development.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          Whether you need an e-commerce app, social networking platform, or
+          custom enterprise solution, we ensure that your mobile app is
+          optimized for performance, security, and scalability.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/mobiledev-1.png' %}"
+          alt="Mobile App Development"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-mobile-alt"></i></h3>
+            <h4>Native & Cross-Platform Apps</h4>
+            <p>
+              We develop both native and cross-platform apps, ensuring the best
+              balance of performance and accessibility on Android and iOS
+              devices.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-users"></i></h3>
+            <h4>User-Centric Design</h4>
+            <p>
+              Our apps are built with user experience at the forefront, focusing
+              on intuitive navigation, appealing aesthetics, and seamless
+              interaction.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-shield-alt"></i></h3>
+            <h4>Security & Performance</h4>
+            <p>
+              We prioritize app security and high performance, implementing
+              secure authentication, data encryption, and optimizing load times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">Ready to Launch Your Mobile App?</h2>
+    <p class="lead text-muted mt-3">
+      Let’s bring your ideas to life with a custom mobile app tailored to meet
+      your business needs and engage your users.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}

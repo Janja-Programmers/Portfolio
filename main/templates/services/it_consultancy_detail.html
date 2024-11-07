@@ -1,0 +1,131 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Hero Section -->
+<section
+  class="hero-section text-center text-white bg-light py-5"
+  data-aos="fade-right"
+  data-aos-delay="400"
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">IT Consultancy</h1>
+    <p class="lead text-muted mt-3">
+      Accelerate growth with expert IT consulting, delivering tailored solutions
+      to meet your project goals efficiently and effectively.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+<!-- Service Details -->
+<section class="py-5" data-aos="fade-up" data-aos-delay="500">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="section-title text-center">Our Consultancy Services</h2>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="600"
+        >
+          We provide tailored IT consultancy to help you refine your technology
+          strategies, streamline operations, and enhance productivity. Our
+          experts work alongside your team to deliver solutions that align with
+          your business objectives, from project planning to deployment.
+        </p>
+        <p
+          class="lead text-muted mx-auto mb-5"
+          style="max-width: 700px"
+          data-aos="fade-right"
+          data-aos-delay="700"
+        >
+          Our goal is to empower your team to innovate efficiently and reach
+          milestones faster, using industry best practices and the latest
+          technological advancements.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="{% static 'img/it-consultancy.jpg' %}"
+          alt="IT Consultancy"
+          class="img-fluid rounded shadow"
+          data-aos="fade-left"
+          data-aos-delay="600"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features/Benefits Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="400">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-chart-line"></i></h3>
+            <h4>Strategy Development</h4>
+            <p>
+              Get a clear roadmap for your projects, designed to improve
+              efficiency, maximize resources, and meet your long-term goals.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-cogs"></i></h3>
+            <h4>Technology Integration</h4>
+            <p>
+              We help you implement and integrate the best technologies to
+              enhance functionality, security, and scalability in your systems.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="600">
+        <div class="card shadow border-0 h-100 course-card">
+          <div class="card-body py-5">
+            <h3><i class="fas fa-user-tie"></i></h3>
+            <h4>Project Management</h4>
+            <p>
+              Our experts ensure your projects are delivered on time and within
+              budget, while adhering to high standards of quality.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call-to-Action Section -->
+<section
+  class="hero-section text-center bg-light py-5"
+  data-aos="fade-up"
+  data-aos-delay="400"
+>
+  <div class="container text-center">
+    <h2 class="section-title text-center">
+      Ready to Optimize Your IT Strategy?
+    </h2>
+    <p class="lead text-muted mt-3">
+      Let us help you unlock new efficiencies and drive growth with our tailored
+      IT consulting services.
+    </p>
+    <a
+      href="{% url 'onboarding' %}"
+      class="btn btn-secondary btn-lg mt-3 rounded-pill"
+      data-aos="fade-up"
+      data-aos-delay="500"
+      >Get Started</a
+    >
+  </div>
+</section>
+
+{% endblock %}
