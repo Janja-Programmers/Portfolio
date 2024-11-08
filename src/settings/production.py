@@ -29,7 +29,7 @@ DATABASES = {
 CSRF_TRUSTED_ORIGINS = []
 
 
-STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 ########################## SECURITY CONFIGURATION ############################
